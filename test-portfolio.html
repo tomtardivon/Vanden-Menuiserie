@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Debug Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            min-height: 600px;
+            padding: 2.5rem;
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .card {
+            position: relative;
+            overflow: hidden;
+            background: white;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            min-height: 300px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card.span-2 {
+            grid-column: span 2;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        
+        .fallback {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, #f3f4f6, #9ca3af);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    Nos réalisations d'exception
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Test de debug pour la galerie de projets
+                </p>
+            </div>
+            
+            <div class="grid-container" id="portfolio-grid">
+                <!-- Cards will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Test data
+        const projects = [
+            {
+                id: 1,
+                className: "span-2",
+                thumbnail: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&q=80&w=800&h=600",
+                title: "Cuisine Contemporaine en Chêne Massif"
+            },
+            {
+                id: 2,
+                className: "",
+                thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&q=80&w=400&h=600",
+                title: "Dressing Sur Mesure avec Miroirs"
+            },
+            {
+                id: 3,
+                className: "",
+                thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&q=80&w=400&h=600",
+                title: "Escalier Point de Hongrie"
+            },
+            {
+                id: 4,
+                className: "span-2",
+                thumbnail: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&q=80&w=800&h=400",
+                title: "Terrasse en Bois Exotique"
+            }
+        ];
+
+        // Render cards
+        const grid = document.getElementById('portfolio-grid');
+        
+        projects.forEach(project => {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = `card ${project.className}`;
+            
+            const img = document.createElement('img');
+            img.src = project.thumbnail;
+            img.alt = project.title;
+            img.loading = 'lazy';
+            
+            img.onerror = function() {
+                console.error('Failed to load image for project:', project.id);
+                this.style.display = 'none';
+                const fallback = document.createElement('div');
+                fallback.className = 'fallback';
+                fallback.innerHTML = `
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏠</div>
+                    <div style="font-size: 0.875rem; font-weight: 500;">Projet #${project.id}</div>
+                    <div style="font-size: 0.75rem; margin-top: 0.25rem;">${project.title}</div>
+                `;
+                cardDiv.appendChild(fallback);
+            };
+            
+            img.onload = function() {
+                console.log('Image loaded successfully for project:', project.id);
+            };
+            
+            cardDiv.appendChild(img);
+            grid.appendChild(cardDiv);
+        });
+        
+        console.log('Portfolio test loaded with', projects.length, 'projects');
+    </script>
+</body>
+</html>

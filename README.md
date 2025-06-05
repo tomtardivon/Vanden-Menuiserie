@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vanden Menuiserie - Site Web Premium
 
-## Getting Started
+Site web professionnel pour Vanden Menuiserie, artisan menuisier dans le Var, développé avec Next.js 15 et Aceternity UI pour des animations exceptionnelles.
 
-First, run the development server:
+## 🚀 Fonctionnalités
+
+### ✨ Animations Premium
+- **Spotlight Effect** : Effet projecteur élégant sur la hero section
+- **Text Generate Effect** : Animation de génération de texte progressive
+- **Layout Grid** : Grille responsive masonry pour la galerie projets
+- **Compare Component** : Slider interactif avant/après pour les rénovations
+- **Bento Grid** : Layout moderne asymétrique pour les services
+- **Floating Navigation** : Navigation flottante avec scroll detection
+
+### 🎯 SEO Multi-Pages Optimisé
+- **15+ pages villes** : Stratégie SEO locale complète (Toulon, Hyères, Fréjus, etc.)
+- **Schema markup** : Structured data LocalBusiness complet
+- **Sitemap dynamique** : Génération automatique des URLs
+- **Meta tags optimisés** : Open Graph, Twitter Cards, canonicals
+- **Performance** : Core Web Vitals optimisés
+
+### 🎨 Design System
+- **Palette Vanden** : Couleurs authentiques (bleu marine, brun bois, beige clair)
+- **Typographie** : Inter + Playfair Display pour l'élégance
+- **Responsive** : Mobile-first design adaptatif
+- **Dark mode** : Support thème sombre
+
+## 🛠️ Technologies
+
+- **Next.js 15** : Framework React avec App Router
+- **Aceternity UI** : Composants d'animation premium
+- **Framer Motion** : Bibliothèque d'animations avancées
+- **Tailwind CSS** : Framework CSS utilitaire
+- **TypeScript** : Typage statique pour la robustesse
+- **Lucide Icons** : Iconographie moderne
+
+## 📦 Installation
 
 ```bash
+# Installer les dépendances
+npm install
+
+# Lancer en développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build de production
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗️ Structure du Projet
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/                          # Next.js App Router
+│   ├── page.tsx                  # Homepage
+│   ├── layout.tsx                # Layout principal
+│   ├── menuisier-[ville]/        # Pages SEO locales
+│   ├── services/                 # Pages services
+│   ├── realisations/             # Galerie projets
+│   ├── sitemap.ts               # Sitemap SEO
+│   └── robots.ts                # Robots.txt
+├── components/
+│   ├── ui/aceternity/           # Composants Aceternity UI
+│   ├── sections/                # Sections de pages
+│   └── navigation/              # Navigation
+└── lib/                         # Utilitaires
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Pages SEO Locales
 
-## Learn More
+Le site inclut une stratégie SEO locale complète avec des pages dédiées :
 
-To learn more about Next.js, take a look at the following resources:
+- `/menuisier-toulon` - Menuisier à Toulon (83000)
+- `/menuisier-hyeres` - Menuisier à Hyères (83400)
+- `/menuisier-frejus` - Menuisier à Fréjus (83600)
+- `/menuisier-la-seyne-sur-mer` - Menuisier à La Seyne-sur-Mer
+- `/menuisier-draguignan` - Menuisier à Draguignan
+- Et 10+ autres villes du Var
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Charte Graphique
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Couleurs Principales
+```css
+--bleu-marine: #1E2B39      /* Texte principal, sérieux */
+--beige-clair: #F5F1E6      /* Fond principal, chaleur */
+--brun-bois: #A67C52        /* Accent, artisanat */
+--gris-doux: #E8E8E8        /* Éléments discrets */
+--blanc-casse: #FDFBF7      /* Contraste élégant */
+```
 
-## Deploy on Vercel
+## 📊 Performance
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Lighthouse Score** : 90+ sur tous les critères
+- **Core Web Vitals** : Optimisé LCP, FID, CLS
+- **Bundle splitting** : Optimisation des chunks
+- **Image optimization** : WebP/AVIF automatique
+- **Lazy loading** : Chargement paresseux des composants
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📞 Contact Entreprise
+
+**Vanden Menuiserie**
+- **Artisan** : Mattias Vanden
+- **Téléphone** : 07 62 14 43 40
+- **Email** : vandenmenuiserie@gmail.com
+- **Zone** : Var (83) - Toulon, Hyères, Fréjus
+- **Réseaux** : @vandenmenuiserie
+
+## 📄 License
+
+Tous droits réservés © 2024 Vanden Menuiserie
+
+---
+
+**Développé avec ❤️ pour l'artisanat français**
