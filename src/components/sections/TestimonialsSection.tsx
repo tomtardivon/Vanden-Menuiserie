@@ -71,7 +71,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: any; index: numb
   >
     {/* Header avec avatar et infos */}
     <div className="flex items-center gap-4 mb-4">
-      <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+      <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gris-perle">
         <Image
           src={testimonial.avatar}
           alt={testimonial.name}
@@ -81,14 +81,14 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: any; index: numb
             e.currentTarget.style.display = 'none';
           }}
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-          <User className="w-6 h-6 text-gray-400" />
+        <div className="absolute inset-0 flex items-center justify-center bg-gris-perle">
+          <User className="w-6 h-6 text-bleu-marine/50" />
         </div>
       </div>
       
       <div className="flex-1">
-        <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-        <div className="flex items-center gap-1 text-sm text-gray-500">
+        <h4 className="font-semibold text-bleu-marine">{testimonial.name}</h4>
+        <div className="flex items-center gap-1 text-sm text-bleu-marine/60">
           <MapPin className="w-3 h-3" />
           {testimonial.location}
         </div>
@@ -108,12 +108,12 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: any; index: numb
     </div>
     
     {/* Testimonial text */}
-    <p className="text-gray-600 leading-relaxed mb-4">
+    <p className="text-bleu-marine/70 leading-relaxed mb-4">
       "{testimonial.text}"
     </p>
     
     {/* Project tag */}
-    <div className="inline-block px-3 py-1 bg-gray-50 rounded-full text-xs font-medium text-gray-600">
+    <div className="inline-block px-3 py-1 bg-gris-perle rounded-full text-xs font-medium text-bleu-marine/70">
       {testimonial.project}
     </div>
   </motion.div>
@@ -121,7 +121,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: any; index: numb
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -132,7 +132,7 @@ export const TestimonialsSection = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.span 
-            className="inline-block text-gray-600 font-medium mb-4 text-lg"
+            className="inline-block text-bleu-marine/70 font-medium mb-4 text-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -141,12 +141,12 @@ export const TestimonialsSection = () => {
             Témoignages
           </motion.span>
           
-          <h2 className="text-4xl lg:text-6xl font-heading font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-6xl font-heading font-bold text-bleu-marine mb-6">
             Ils nous font
-            <span className="block text-gray-600">confiance</span>
+            <span className="block text-bleu-marine/70">confiance</span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-bleu-marine/70 max-w-3xl mx-auto">
             Découvrez les retours de nos clients qui ont fait appel à notre expertise 
             pour leurs projets de menuiserie sur mesure.
           </p>
@@ -161,20 +161,20 @@ export const TestimonialsSection = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">100%</div>
-              <div className="text-gray-600 text-sm">Clients satisfaits</div>
+              <div className="text-3xl font-bold text-bleu-marine mb-2">100%</div>
+              <div className="text-bleu-marine/70 text-sm">Clients satisfaits</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">5.0★</div>
-              <div className="text-gray-600 text-sm">Note moyenne</div>
+              <div className="text-3xl font-bold text-bleu-marine mb-2">5.0★</div>
+              <div className="text-bleu-marine/70 text-sm">Note moyenne</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">150+</div>
-              <div className="text-gray-600 text-sm">Avis positifs</div>
+              <div className="text-3xl font-bold text-bleu-marine mb-2">150+</div>
+              <div className="text-bleu-marine/70 text-sm">Avis positifs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">35</div>
-              <div className="text-gray-600 text-sm">Années d'expérience</div>
+              <div className="text-3xl font-bold text-bleu-marine mb-2">35</div>
+              <div className="text-bleu-marine/70 text-sm">Années d'expérience</div>
             </div>
           </div>
         </motion.div>
@@ -208,7 +208,7 @@ export const TestimonialsSection = () => {
             href="/contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all"
+            className="inline-flex items-center gap-2 bg-white text-bleu-marine px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all"
           >
             Demander un devis gratuit
           </motion.a>

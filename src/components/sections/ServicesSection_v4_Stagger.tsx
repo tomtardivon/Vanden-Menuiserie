@@ -1,13 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { 
-  ChefHat, 
-  Home, 
-  DoorOpen, 
-  Trees,
-  ArrowUpRight
-} from "lucide-react";
+import { ChefHat, Home, DoorOpen, Trees, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,32 +20,32 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
     <motion.div
       ref={cardRef}
       style={{ y, opacity, scale }}
-      className="sticky top-16 lg:top-24"
+      className="sticky top-24"
     >
-      <div className="bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl lg:shadow-2xl">
-        <div className="grid lg:grid-cols-2 gap-0">
-          <div className="relative h-56 lg:h-auto min-h-[300px]">
+      <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
+        <div className="grid md:grid-cols-2 gap-0">
+          <div className="relative h-64 md:h-auto">
             <Image
               src={service.image}
               alt={service.title}
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent lg:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent md:hidden" />
           </div>
 
-          <div className="p-6 lg:p-10">
+          <div className="p-8 lg:p-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 + index * 0.1 }}
-              className="inline-flex items-center gap-2 lg:gap-3 mb-4 lg:mb-6"
+              className="inline-flex items-center gap-3 mb-6"
             >
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-brun-bois/20 to-gold/20 rounded-xl lg:rounded-2xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-brun-bois/20 to-gold/20 rounded-2xl flex items-center justify-center">
                 {service.icon}
               </div>
-              <span className="text-xs lg:text-sm font-medium text-brun-bois uppercase tracking-wider">
+              <span className="text-sm font-medium text-brun-bois uppercase tracking-wider">
                 Expertise {index + 1}
               </span>
             </motion.div>
@@ -61,7 +55,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 + index * 0.1 }}
-              className="text-2xl lg:text-3xl xl:text-4xl font-heading font-bold text-bleu-marine mb-3 lg:mb-4 leading-tight"
+              className="text-3xl lg:text-4xl font-heading font-bold text-bleu-marine mb-4"
             >
               {service.title}
             </motion.h3>
@@ -71,7 +65,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 + index * 0.1 }}
-              className="text-bleu-marine/70 leading-relaxed mb-4 lg:mb-6 text-sm lg:text-base"
+              className="text-bleu-marine/70 leading-relaxed mb-6"
             >
               {service.description}
             </motion.p>
@@ -81,7 +75,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 + index * 0.1 }}
-              className="space-y-2 lg:space-y-3 mb-6 lg:mb-8"
+              className="space-y-3 mb-8"
             >
               {service.features.map((feature: string, idx: number) => (
                 <motion.div
@@ -90,10 +84,10 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.7 + index * 0.1 + idx * 0.05 }}
-                  className="flex items-center gap-2 lg:gap-3"
+                  className="flex items-center gap-3"
                 >
-                  <div className="w-6 lg:w-8 h-[1px] bg-gold" />
-                  <span className="text-xs lg:text-sm text-bleu-marine/80">{feature}</span>
+                  <div className="w-8 h-[1px] bg-gold" />
+                  <span className="text-sm text-bleu-marine/80">{feature}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -106,11 +100,11 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
             >
               <Link
                 href={service.href}
-                className="group inline-flex items-center gap-2 lg:gap-3 text-brun-bois font-semibold hover:text-gold transition-colors text-sm lg:text-base"
+                className="group inline-flex items-center gap-3 text-brun-bois font-semibold hover:text-gold transition-colors"
               >
                 <span>Explorer ce service</span>
-                <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-current flex items-center justify-center group-hover:bg-brun-bois group-hover:text-white transition-all">
-                  <ArrowUpRight className="w-3 h-3 lg:w-4 lg:h-4" />
+                <div className="w-10 h-10 rounded-full border-2 border-current flex items-center justify-center group-hover:bg-brun-bois group-hover:text-white transition-all">
+                  <ArrowUpRight className="w-4 h-4" />
                 </div>
               </Link>
             </motion.div>
@@ -175,7 +169,7 @@ export const ServicesSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-16 lg:py-24">
+    <section ref={sectionRef} className="relative py-24">
       <motion.div
         className="absolute inset-0 bg-gradient-to-b from-gris-perle/30 via-white to-gris-perle/30"
         style={{
@@ -184,9 +178,9 @@ export const ServicesSection = () => {
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto px-4">
+      <div className="relative max-w-7xl mx-auto px-4">
         <motion.div
-          className="text-center mb-16 lg:mb-20"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -194,17 +188,17 @@ export const ServicesSection = () => {
         >
           <motion.div
             initial={{ width: 0 }}
-            whileInView={{ width: 80 }}
+            whileInView={{ width: 120 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="h-[1px] bg-brun-bois mx-auto mb-6"
+            className="h-[1px] bg-brun-bois mx-auto mb-8"
           />
           
-          <span className="inline-block text-brun-bois font-medium mb-3 text-base lg:text-lg">
+          <span className="inline-block text-brun-bois font-medium mb-4 text-lg">
             NOS EXPERTISES
           </span>
           
-          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-heading font-bold text-bleu-marine mb-4 lg:mb-6 leading-tight">
+          <h2 className="text-5xl lg:text-7xl font-heading font-bold text-bleu-marine mb-6">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -214,7 +208,7 @@ export const ServicesSection = () => {
               Un savoir-faire
             </motion.span>
             <motion.span
-              className="block text-brun-bois"
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-brun-bois to-gold"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -226,35 +220,35 @@ export const ServicesSection = () => {
 
           <motion.div
             initial={{ width: 0 }}
-            whileInView={{ width: 80 }}
+            whileInView={{ width: 120 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="h-[1px] bg-brun-bois mx-auto mt-6"
+            className="h-[1px] bg-brun-bois mx-auto mt-8"
           />
         </motion.div>
 
-        <div className="space-y-24 lg:space-y-32">
+        <div className="space-y-32">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
 
         <motion.div
-          className="mt-24 lg:mt-32 text-center"
+          className="mt-32 text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-xl lg:text-2xl text-bleu-marine/70 mb-6 lg:mb-8">
+          <p className="text-2xl text-bleu-marine/70 mb-8">
             Prêt à transformer votre espace ?
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 lg:gap-4 px-6 lg:px-8 py-3 lg:py-4 bg-bleu-marine text-white rounded-full font-semibold text-base lg:text-lg hover:bg-bleu-marine/90 transition-colors"
+            className="inline-flex items-center gap-4 px-8 py-4 bg-bleu-marine text-white rounded-full font-semibold text-lg hover:bg-bleu-marine/90 transition-colors"
           >
             <span>Démarrer votre projet</span>
-            <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5" />
+            <ArrowUpRight className="w-5 h-5" />
           </Link>
         </motion.div>
       </div>

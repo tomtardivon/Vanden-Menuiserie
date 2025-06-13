@@ -35,12 +35,12 @@ const config: Config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         
-        // Luxury wood colors
-        'wood-dark': 'var(--wood-dark)',
-        'wood-medium': 'var(--wood-medium)',
-        'wood-light': 'var(--wood-light)',
-        'gold': 'var(--gold-accent)',
-        'silver': 'var(--silver-accent)',
+        // Vanden Menuiserie colors - Palette 4 couleurs
+        'bleu-marine': 'var(--bleu-marine)',
+        'beige-moderne': 'var(--beige-moderne)',
+        'brun-bois': 'var(--brun-bois)',
+        'gris-perle': 'var(--gris-perle)',
+        'blanc-pur': 'var(--blanc-pur)',
       },
       fontFamily: {
         'heading': ['var(--font-playfair)', 'serif'],

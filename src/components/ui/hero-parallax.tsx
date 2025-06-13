@@ -29,11 +29,11 @@ export const HeroParallax = ({
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
   const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    useTransform(scrollYProgress, [0, 1], [0, 300]),
     springConfig
   );
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    useTransform(scrollYProgress, [0, 1], [0, -300]),
     springConfig
   );
   const rotateX = useSpring(
@@ -55,7 +55,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] max-w-full"
     >
       <Header />
       <motion.div
@@ -102,10 +102,10 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold ">
+      <h1 className="text-2xl md:text-7xl font-bold text-bleu-marine">
         L&apos;excellence <br /> du bois
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 ">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-bleu-marine/80">
         Nous créons des pièces uniques qui allient tradition et modernité.
         Chaque projet est une œuvre d&apos;art conçue pour durer dans le temps.
       </p>
@@ -133,7 +133,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-96 w-[20rem] md:w-[24rem] lg:w-[30rem] relative flex-shrink-0"
     >
       <a
         href={product.link}
@@ -147,7 +147,7 @@ export const ProductCard = ({
           alt={product.title}
         />
       </a>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-bleu-marine pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
       </h2>

@@ -10,6 +10,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import { AnimatedLink } from "@/components/ui/animated-link";
 import { useState } from "react";
 
 export function Navigation() {
@@ -71,10 +72,15 @@ export function Navigation() {
       <MobileNav>
         <MobileNavHeader>
           <NavbarLogo />
-          <MobileNavToggle
-            isOpen={isMobileMenuOpen}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          />
+          <div className="flex items-center gap-3">
+            <NavbarButton variant="gradient" href="/contact" className="text-xs px-3 py-2">
+              Devis
+            </NavbarButton>
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
+          </div>
         </MobileNavHeader>
 
         <MobileNavMenu
@@ -82,38 +88,38 @@ export function Navigation() {
           onClose={() => setIsMobileMenuOpen(false)}
         >
           <div className="flex flex-col space-y-4 w-full">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+            <h3 className="text-sm font-semibold text-bleu-marine/50 uppercase tracking-wide">
               Menu Principal
             </h3>
             {navItems.map((item, idx) => (
-              <a
+              <AnimatedLink
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-wood-dark transition-colors font-medium py-2"
+                className="text-bleu-marine/80 hover:text-brun-bois transition-colors font-medium py-2"
               >
                 {item.name}
-              </a>
+              </AnimatedLink>
             ))}
           </div>
 
-          <div className="flex flex-col space-y-4 w-full pt-4 border-t border-gray-200">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+          <div className="flex flex-col space-y-4 w-full pt-4 border-t border-gris-perle">
+            <h3 className="text-sm font-semibold text-bleu-marine/50 uppercase tracking-wide">
               Zones d&apos;intervention
             </h3>
             {localPages.map((item, idx) => (
-              <a
+              <AnimatedLink
                 key={`mobile-local-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-600 hover:text-wood-dark transition-colors text-sm py-1"
+                className="text-bleu-marine/70 hover:text-brun-bois transition-colors text-sm py-1"
               >
                 {item.name}
-              </a>
+              </AnimatedLink>
             ))}
           </div>
 
-          <div className="flex w-full flex-col gap-3 pt-6 border-t border-gray-200">
+          <div className="flex w-full flex-col gap-3 pt-6 border-t border-gris-perle">
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
               variant="secondary"

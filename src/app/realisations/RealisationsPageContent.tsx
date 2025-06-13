@@ -11,8 +11,8 @@ export function RealisationsPageContent() {
   ));
 
   return (
-    <div className="w-full min-h-screen bg-white pt-20 py-20">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="w-full min-h-screen bg-white pt-20 pb-20">
+      <div className="max-w-7xl mx-auto px-4 pt-20 md:pt-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export function RealisationsPageContent() {
           <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">
             Nos Réalisations
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-bleu-marine/70 max-w-3xl mx-auto">
             Découvrez une sélection de nos plus belles créations, 
             témoignages de notre savoir-faire et de notre passion pour l'excellence.
           </p>
@@ -32,7 +32,7 @@ export function RealisationsPageContent() {
       <Carousel items={cards} />
       
       {/* Statistics Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-bleu-marine">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -48,10 +48,10 @@ export function RealisationsPageContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-4xl md:text-5xl font-bold text-black mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-white/70">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -79,31 +79,31 @@ const ProjectContent = ({ project }: { project: any }) => {
       </div>
 
       {/* Project Details */}
-      <div className="bg-gray-50 rounded-2xl p-8">
+      <div className="bg-gris-perle rounded-2xl p-8">
         <h3 className="text-2xl font-semibold mb-6">Détails du projet</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="flex items-start space-x-3">
-            <Calendar className="w-5 h-5 text-gray-400 mt-1" />
+            <Calendar className="w-5 h-5 text-bleu-marine/50 mt-1" />
             <div>
               <p className="font-medium">Durée</p>
-              <p className="text-gray-600">{project.duration}</p>
+              <p className="text-bleu-marine/70">{project.duration}</p>
             </div>
           </div>
           
           <div className="flex items-start space-x-3">
-            <MapPin className="w-5 h-5 text-gray-400 mt-1" />
+            <MapPin className="w-5 h-5 text-bleu-marine/50 mt-1" />
             <div>
               <p className="font-medium">Localisation</p>
-              <p className="text-gray-600">{project.location}</p>
+              <p className="text-bleu-marine/70">{project.location}</p>
             </div>
           </div>
           
           <div className="flex items-start space-x-3">
-            <User className="w-5 h-5 text-gray-400 mt-1" />
+            <User className="w-5 h-5 text-bleu-marine/50 mt-1" />
             <div>
               <p className="font-medium">Type</p>
-              <p className="text-gray-600">{project.type}</p>
+              <p className="text-bleu-marine/70">{project.type}</p>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ const ProjectContent = ({ project }: { project: any }) => {
         <div className="space-y-4">
           <div>
             <h4 className="font-semibold mb-2">Description</h4>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-bleu-marine/70 leading-relaxed">
               {project.description}
             </p>
           </div>
@@ -122,7 +122,7 @@ const ProjectContent = ({ project }: { project: any }) => {
               {project.materials.map((material: string, index: number) => (
                 <span
                   key={index}
-                  className="px-3 py-1 bg-white rounded-full text-sm text-gray-700"
+                  className="px-3 py-1 bg-beige-moderne rounded-full text-sm text-bleu-marine/80"
                 >
                   {material}
                 </span>
@@ -131,8 +131,8 @@ const ProjectContent = ({ project }: { project: any }) => {
           </div>
 
           {project.testimonial && (
-            <div className="bg-white rounded-xl p-6 mt-6">
-              <p className="text-gray-600 italic mb-4">
+            <div className="bg-beige-moderne rounded-xl p-6 mt-6">
+              <p className="text-bleu-marine/70 italic mb-4">
                 "{project.testimonial.text}"
               </p>
               <p className="font-medium text-sm">

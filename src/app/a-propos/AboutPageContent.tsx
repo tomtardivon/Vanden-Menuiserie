@@ -39,32 +39,22 @@ export function AboutPageContent() {
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30 z-10" />
-        <Image
-          src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1920&h=800&auto=format&q=80"
-          alt="Atelier Vanden Menuiserie"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
-          <motion.h1
+      <section className="py-20 pt-32 md:pt-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-heading font-bold mb-6"
+            className="text-center mb-16"
           >
-            Notre Histoire
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-200"
-          >
-            Trois générations de passion pour le bois
-          </motion.p>
+            <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">
+              Notre Histoire
+            </h1>
+            <p className="text-xl text-bleu-marine/70 max-w-3xl mx-auto">
+              Trois générations de passion pour le bois. 
+              Découvrez l'histoire de Vanden Menuiserie, artisan menuisier dans le Var depuis 1985.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -81,7 +71,7 @@ export function AboutPageContent() {
               <h2 className="text-4xl font-heading font-bold mb-6">
                 Une entreprise familiale depuis 1985
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-bleu-marine/70 leading-relaxed">
                 <p>
                   Vanden Menuiserie est née de la passion de Jean Vanden pour le travail du bois. 
                   Installé à Toulon en 1985, il a commencé dans un petit atelier avec une vision simple : 
@@ -119,7 +109,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gris-perle">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -129,7 +119,7 @@ export function AboutPageContent() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-heading font-bold mb-6">Nos Valeurs</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-bleu-marine/70">
               Les principes qui guident notre travail au quotidien
             </p>
           </motion.div>
@@ -144,11 +134,11 @@ export function AboutPageContent() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gris-perle rounded-full mb-4">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <p className="text-bleu-marine/70">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -183,9 +173,9 @@ export function AboutPageContent() {
                 }`}
               >
                 <div className={`w-5/12 ${index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"}`}>
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <div className="text-2xl font-bold text-gray-900 mb-2">{milestone.year}</div>
-                    <p className="text-gray-600">{milestone.event}</p>
+                  <div className="bg-white/80 backdrop-blur p-6 rounded-xl shadow-md">
+                    <div className="text-2xl font-bold text-bleu-marine mb-2">{milestone.year}</div>
+                    <p className="text-bleu-marine/70">{milestone.event}</p>
                   </div>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gold rounded-full border-4 border-white" />
@@ -196,7 +186,7 @@ export function AboutPageContent() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gris-perle">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -214,8 +204,8 @@ export function AboutPageContent() {
               />
             </div>
             <h3 className="text-2xl font-semibold mb-2">Mattias Vanden</h3>
-            <p className="text-gray-600 mb-6">Maître Artisan Menuisier</p>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-bleu-marine/70 mb-6">Maître Artisan Menuisier</p>
+            <p className="text-bleu-marine/70 max-w-2xl mx-auto leading-relaxed">
               "Mon objectif est de perpétuer la tradition familiale tout en innovant constamment. 
               Chaque projet est unique et mérite toute notre attention. C'est cette philosophie 
               qui guide mon travail au quotidien et qui fait la réputation de Vanden Menuiserie."
@@ -225,7 +215,7 @@ export function AboutPageContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-bleu-marine">
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -233,15 +223,15 @@ export function AboutPageContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-heading font-bold mb-6">
+            <h2 className="text-4xl font-heading font-bold mb-6 text-white">
               Écrivons ensemble votre histoire
             </h2>
-            <p className="text-xl text-gray-600 mb-10">
+            <p className="text-xl text-white/80 mb-10">
               Confiez-nous votre projet et bénéficiez de notre expertise
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-white text-bleu-marine rounded-full hover:bg-beige-moderne transition-colors"
             >
               Commencer mon projet
             </Link>

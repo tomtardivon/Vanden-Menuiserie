@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { AnimatedLink } from "./animated-link";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -112,7 +113,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full px-6 py-3 lg:flex",
-        visible ? "bg-black/90" : "bg-transparent",
+        visible ? "bg-white" : "bg-transparent",
         className
       )}
     >
@@ -169,32 +170,36 @@ export const NavItems = ({
       onMouseLeave={() => setHovered(null)}
       className={cn(
         "absolute left-1/2 transform -translate-x-1/2 hidden flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
-        visible ? "text-gray-900" : "text-gray-900",
+        visible ? "text-bleu-marine" : "text-bleu-marine",
         className
       )}
     >
       {items.map((item, idx) => (
-        <a
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className={cn(
-            "relative px-4 py-2 font-medium transition-colors",
-            visible ? "text-white" : "text-gray-900"
-          )}
+        <div
           key={`link-${idx}`}
-          href={item.link}
+          onMouseEnter={() => setHovered(idx)}
+          className="relative"
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
               className={cn(
                 "absolute inset-0 h-full w-full rounded-full",
-                visible ? "bg-white/20" : "bg-gray-100"
+                visible ? "bg-gris-perle" : "bg-gris-perle"
               )}
             />
           )}
-          <span className="relative z-20">{item.name}</span>
-        </a>
+          <AnimatedLink
+            href={item.link}
+            onClick={onItemClick}
+            className={cn(
+              "relative z-20 px-4 py-2 font-medium transition-colors",
+              visible ? "text-bleu-marine" : "text-bleu-marine"
+            )}
+          >
+            {item.name}
+          </AnimatedLink>
+        </div>
       ))}
     </div>
   );
@@ -208,11 +213,11 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         boxShadow: visible
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "none",
-        width: visible ? "90%" : "100%",
-        paddingRight: visible ? "12px" : "0px",
-        paddingLeft: visible ? "12px" : "0px",
-        borderRadius: "2rem",
-        y: visible ? 20 : 0,
+        width: visible ? "85%" : "100%",
+        paddingRight: visible ? "16px" : "0px",
+        paddingLeft: visible ? "16px" : "0px",
+        borderRadius: visible ? "2rem" : "0rem",
+        y: visible ? 12 : 0,
       }}
       transition={{
         type: "spring",
@@ -220,8 +225,9 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         damping: 50,
       }}
       className={cn(
-        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between px-0 py-2 lg:hidden",
-        visible ? "bg-black/90" : "bg-white/80",
+        "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between py-2 lg:hidden",
+        visible ? "px-0" : "px-4",
+        visible ? "bg-white" : "bg-transparent",
         className
       )}
     >
@@ -279,7 +285,7 @@ export const MobileNavMenu = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-beige-moderne px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
             className
           )}
         >
@@ -301,7 +307,7 @@ export const MobileNavToggle = ({
 }) => {
   const iconClass = cn(
     "h-6 w-6 cursor-pointer transition-colors",
-    visible ? "text-white" : "text-gray-900"
+    visible ? "text-bleu-marine" : "text-white"
   );
 
   return isOpen ? (
@@ -317,20 +323,17 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
     >
-      <div className="w-8 h-8 bg-gradient-to-br from-wood-dark to-gold rounded-md flex items-center justify-center">
-        <span
-          className={cn(
-            "font-bold text-lg",
-            visible ? "text-white" : "text-gray-900"
-          )}
-        >
-          V
-        </span>
+      <div className="w-10 h-10 relative">
+        <img
+          src="/logo-whitout-background.png"
+          alt="Vanden Menuiserie"
+          className="w-full h-full object-contain"
+        />
       </div>
       <span
         className={cn(
           "font-heading font-bold transition-colors",
-          visible ? "text-white" : "text-gray-900"
+          visible ? "text-bleu-marine" : "text-white"
         )}
       >
         Vanden
@@ -359,17 +362,19 @@ export const NavbarButton = ({
   | React.ComponentPropsWithoutRef<"button">
 )) => {
   const baseStyles =
-    "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
+    "px-4 py-2 rounded-md text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
   const variantStyles = {
-    primary:
-      "shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+    primary: visible 
+      ? "bg-beige-moderne text-bleu-marine shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+      : "bg-beige-moderne text-bleu-marine shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
     secondary: visible
-      ? "bg-transparent shadow-none text-white"
-      : "bg-transparent shadow-none text-gray-900",
-    dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
-    gradient:
-      "bg-gradient-to-b from-wood-dark to-gold text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
+      ? "bg-transparent shadow-none text-bleu-marine"
+      : "bg-transparent shadow-none text-bleu-marine",
+    dark: "bg-bleu-marine text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+    gradient: visible
+      ? "bg-bleu-marine text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]"
+      : "bg-white/20 backdrop-blur-md text-white border border-white/30 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
   return (

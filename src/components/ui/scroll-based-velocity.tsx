@@ -38,7 +38,7 @@ function ParallaxText({ children, baseVelocity = 100, className }: ParallaxProps
     clamp: false,
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-20, -25, v)}%`);
 
   const directionFactor = React.useRef<number>(1);
   
@@ -57,10 +57,10 @@ function ParallaxText({ children, baseVelocity = 100, className }: ParallaxProps
   });
 
   return (
-    <div className="overflow-hidden whitespace-nowrap">
+    <div className="overflow-hidden whitespace-nowrap w-full max-w-full">
       <motion.div
         className={cn(
-          "inline-flex whitespace-nowrap",
+          "inline-flex whitespace-nowrap w-max",
           className
         )}
         style={{ x }}
@@ -81,12 +81,12 @@ export function VelocityScroll({
   className,
 }: VelocityScrollProps) {
   return (
-    <div className={cn("relative w-full", className)}>
+    <div className={cn("relative w-full max-w-full overflow-hidden", className)}>
       {Array.from({ length: numRows }).map((_, i) => (
         <ParallaxText
           key={i}
           baseVelocity={i % 2 === 0 ? -defaultVelocity : defaultVelocity}
-          className="text-4xl font-heading font-bold text-gray-900 md:text-6xl lg:text-7xl py-2"
+          className="text-4xl font-heading font-bold text-bleu-marine md:text-6xl lg:text-7xl py-2"
         >
           {children}
         </ParallaxText>

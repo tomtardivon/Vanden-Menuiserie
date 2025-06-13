@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['@tabler/icons-react', 'lucide-react'],
   },
+  turbopack: {
+    resolveAlias: {
+      // Add any aliases you might need
+    },
+    resolveExtensions: ['.tsx', '.ts', '.jsx', '.js', '.mjs', '.json', '.css'],
+  },
   images: {
     remotePatterns: [
       {

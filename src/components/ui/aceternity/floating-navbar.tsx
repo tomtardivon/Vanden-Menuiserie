@@ -91,7 +91,7 @@ export const FloatingNav = ({
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-blanc-casse font-bold text-xl">V</span>
+            <span className="text-white font-bold text-xl">V</span>
           </motion.div>
           <motion.span 
             className="text-bleu-marine font-heading font-bold text-xl hidden md:block whitespace-nowrap overflow-hidden"
@@ -124,7 +124,7 @@ export const FloatingNav = ({
         >
           <Link
             href="/contact"
-            className="bg-brun-bois hover:bg-brun-bois-dark text-blanc-casse px-6 py-3 rounded-full font-semibold transition-all whitespace-nowrap"
+            className="bg-brun-bois hover:bg-brun-bois-dark text-white px-6 py-3 rounded-full font-semibold transition-all whitespace-nowrap"
           >
             Contact
           </Link>

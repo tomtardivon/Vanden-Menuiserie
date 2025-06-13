@@ -1,33 +1,72 @@
 @import "tailwindcss";
 
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
 :root {
   --background: #FFFFFF;
-  --foreground: #0A0A0A;
-  --card: #FAFAFA;
-  --card-foreground: #0A0A0A;
+  --foreground: #1E2B39;
+  --card: #FFFFFF;
+  --card-foreground: #1E2B39;
   --popover: #FFFFFF;
-  --popover-foreground: #0A0A0A;
-  --primary: #0A0A0A;
+  --popover-foreground: #1E2B39;
+  --primary: #1E2B39;
   --primary-foreground: #FFFFFF;
-  --secondary: #F5F5F5;
-  --secondary-foreground: #0A0A0A;
-  --muted: #F5F5F5;
-  --muted-foreground: #737373;
-  --accent: #E5E5E5;
-  --accent-foreground: #0A0A0A;
+  --secondary: #E8E8E8;
+  --secondary-foreground: #1E2B39;
+  --muted: #E8E8E8;
+  --muted-foreground: #6B7280;
+  --accent: #A67C52;
+  --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
-  --border: #E5E5E5;
-  --input: #E5E5E5;
-  --ring: #0A0A0A;
+  --border: #E8E8E8;
+  --input: #E8E8E8;
+  --ring: #A67C52;
   --radius: 0.5rem;
   
-  /* Custom colors for luxury wood effect */
-  --wood-dark: #3E2723;
-  --wood-medium: #5D4037;
-  --wood-light: #8D6E63;
-  --gold-accent: #D4AF37;
-  --silver-accent: #C0C0C0;
+  /* Custom Vanden Menuiserie colors - Palette 4 couleurs */
+  --bleu-marine: #1E2B39;
+  --beige-moderne: #F8F5F0;
+  --brun-bois: #A67C52;
+  --gris-perle: #F8F9FA;
+  --blanc-pur: #FFFFFF;
+}
+
+/* Utility classes for Vanden colors - Palette 4 couleurs */
+.bg-bleu-marine { 
+  background-color: #1E2B39; 
+}
+.bg-beige-moderne { 
+  background-color: #F8F5F0; 
+}
+.bg-gris-perle { 
+  background-color: #F8F9FA; 
+}
+.bg-blanc-pur { 
+  background-color: #FFFFFF; 
+}
+.bg-brun-bois { 
+  background-color: #A67C52; 
+}
+.text-bleu-marine { 
+  color: #1E2B39; 
+}
+.text-brun-bois { 
+  color: #A67C52; 
+}
+.border-bleu-marine { 
+  border-color: #1E2B39; 
+}
+.hover\:bg-brun-bois:hover { 
+  background-color: #A67C52; 
 }
 
 .dark {
@@ -61,6 +100,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
   font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -70,6 +111,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Selection styles */
@@ -107,4 +150,20 @@ html {
   background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23A67C52' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40v40zm40 0v-40h-40l40 40z'/%3E%3C/g%3E%3C/svg%3E") repeat;
   pointer-events: none;
   z-index: 1;
+}
+
+/* Spotlight animation */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+.animate-spotlight {
+  animation: spotlight 2s ease-out forwards;
 }

@@ -48,7 +48,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               <motion.div
                 onClick={() => handleClick(card)}
                 className={cn(
-                  "relative overflow-hidden bg-white rounded-xl cursor-pointer shadow-lg",
+                  "relative overflow-hidden bg-beige-moderne rounded-xl cursor-pointer shadow-lg",
                   "h-full min-h-[300px] group"
                 )}
                 layoutId={`card-${card.id}`}
@@ -58,7 +58,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                 <BlurImage card={card} />
                 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-bleu-marine bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                   <div className="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="text-2xl mb-2">👁️</div>
                     <p className="text-sm font-medium">Voir le projet</p>
@@ -75,14 +75,14 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
           <div className="fixed inset-0 h-full w-full flex items-center justify-center z-50">
             <motion.div
               onClick={handleOutsideClick}
-              className="bg-black opacity-80 absolute inset-0 h-full w-full cursor-pointer"
+              className="bg-bleu-marine opacity-80 absolute inset-0 h-full w-full cursor-pointer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.8 }}
               exit={{ opacity: 0 }}
             />
             <motion.div
               layoutId={`card-${selected.id}`}
-              className="w-full max-w-5xl h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden relative"
+              className="w-full max-w-5xl h-full md:h-fit md:max-h-[90%] flex flex-col bg-beige-moderne dark:bg-neutral-900 sm:rounded-3xl overflow-hidden relative"
             >
               <motion.div className="relative">
                 <BlurImage card={selected} />
@@ -134,7 +134,7 @@ const BlurImage = ({ card }: { card: Card }) => {
         />
       ) : (
         <div className="absolute inset-0 h-full w-full bg-gradient-to-br from-gray-200 to-gray-400 flex items-center justify-center">
-          <div className="text-center text-gray-600">
+          <div className="text-center text-bleu-marine/70">
             <div className="text-4xl mb-2">🏠</div>
             <div className="text-sm font-medium">Projet #{card.id}</div>
             <div className="text-xs mt-1 opacity-75">Image non disponible</div>
@@ -144,7 +144,7 @@ const BlurImage = ({ card }: { card: Card }) => {
       
       {/* Loading state */}
       {!loaded && !error && (
-        <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center">
+        <div className="absolute inset-0 bg-gris-doux animate-pulse flex items-center justify-center">
           <div className="text-center text-gray-400">
             <div className="animate-spin w-8 h-8 border-4 border-gray-300 border-t-gray-600 rounded-full mx-auto mb-2"></div>
             <div className="text-sm">Chargement...</div>

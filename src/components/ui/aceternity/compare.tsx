@@ -79,7 +79,7 @@ export const Compare: React.FC<CompareProps> = ({
           height={1000}
           priority
         />
-        <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+        <div className="absolute top-4 left-4 bg-bleu-marine/50 text-white px-3 py-1 rounded-full text-sm font-medium">
           Avant
         </div>
       </div>
@@ -100,7 +100,7 @@ export const Compare: React.FC<CompareProps> = ({
           height={1000}
           priority
         />
-        <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+        <div className="absolute top-4 right-4 bg-bleu-marine/50 text-white px-3 py-1 rounded-full text-sm font-medium">
           Après
         </div>
       </motion.div>
@@ -108,14 +108,14 @@ export const Compare: React.FC<CompareProps> = ({
       {/* Slider Handle */}
       {showHandlebar && (
         <motion.div
-          className="absolute top-0 h-full w-1 bg-white shadow-lg z-30 cursor-col-resize"
+          className="absolute top-0 h-full w-1 bg-beige-moderne shadow-lg z-30 cursor-col-resize"
           style={{
             left: `${sliderXPercent}%`,
             transform: "translateX(-50%)",
           }}
           transition={{ type: "tween", duration: 0.1 }}
         >
-          <div className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white rounded-full shadow-lg border-2 border-neutral-300 flex items-center justify-center">
+          <div className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-beige-moderne rounded-full shadow-lg border-2 border-neutral-300 flex items-center justify-center">
             <div className="w-1 h-3 bg-neutral-400 rounded-full"></div>
           </div>
         </motion.div>
@@ -128,7 +128,7 @@ export const Compare: React.FC<CompareProps> = ({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-3 py-1 rounded-full text-sm"
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-bleu-marine/70 text-white px-3 py-1 rounded-full text-sm"
           >
             Survolez pour comparer
           </motion.div>

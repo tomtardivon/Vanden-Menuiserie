@@ -63,7 +63,7 @@ export default function MenuisierToulon() {
               </div>
               
               <div className="relative">
-                <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <div className="bg-gris-perle rounded-2xl p-8 shadow-xl">
                   <h3 className="text-2xl font-heading font-bold text-bleu-marine mb-6">
                     Nos Services à Toulon
                   </h3>

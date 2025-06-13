@@ -43,7 +43,7 @@ export const BentoGridItem = ({
     <Component
       {...extraProps}
       className={cn(
-        "rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-6 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 min-h-[320px]",
+        "rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-6 dark:bg-bleu-marine dark:border-white/[0.2] bg-beige-moderne border border-transparent justify-between flex flex-col space-y-4 min-h-[320px]",
         className
       )}
       whileHover={{ y: -5, scale: 1.02 }}

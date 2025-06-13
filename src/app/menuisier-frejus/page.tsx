@@ -13,7 +13,7 @@ export default function MenuisierFrejusPage() {
         <h1 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-center">
           Menuisier à Fréjus
         </h1>
-        <p className="text-xl text-gray-600 mb-8 text-center leading-relaxed">
+        <p className="text-xl text-bleu-marine/70 mb-8 text-center leading-relaxed">
           Votre artisan menuisier de confiance à Fréjus et ses environs. 
           Spécialisé dans la création de menuiseries sur mesure depuis 1985.
         </p>
@@ -34,7 +34,7 @@ export default function MenuisierFrejusPage() {
           <div className="mt-12 text-center">
             <a 
               href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-bleu-marine text-white rounded-full hover:bg-brun-bois transition-colors"
             >
               Demander un devis gratuit
             </a>

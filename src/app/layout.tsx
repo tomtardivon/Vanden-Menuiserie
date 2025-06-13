@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Navigation } from "@/components/navigation/Navigation";
 import { Footer } from "@/components/footer/Footer";
+import { SimplePageTransition } from "@/components/ui/simple-page-transition";
 import "./globals.css";
 
 const inter = Inter({
@@ -71,9 +72,11 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#A67C52" />
+        <link rel="icon" href="/logo-whitout-background.png" />
+        <link rel="apple-touch-icon" href="/logo-whitout-background.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo-whitout-background.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo-whitout-background.png" />
+        <meta name="theme-color" content="#1E2B39" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
@@ -121,7 +124,9 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} font-body antialiased`}
       >
         <Navigation />
-        {children}
+        <SimplePageTransition type="fade">
+          {children}
+        </SimplePageTransition>
         <Footer />
       </body>
     </html>

@@ -28,11 +28,11 @@ export const ThreeDGallerySection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-heading font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-6xl font-heading font-bold text-bleu-marine mb-6">
             Galerie 3D
-            <span className="block text-gray-600">de nos créations</span>
+            <span className="block text-bleu-marine/70">de nos créations</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-bleu-marine/70 max-w-3xl mx-auto">
             Explorez nos réalisations sous tous les angles. 
             Chaque projet raconte une histoire unique.
           </p>
