@@ -47,7 +47,7 @@ export const HeroSection = () => {
               { text: "le", className: "text-bleu-marine/70" },
               { text: "Var", className: "text-wood-dark font-bold" },
               { text: "depuis", className: "text-bleu-marine/70" },
-              { text: "1985", className: "text-gold font-bold" },
+              { text: "2022", className: "text-gold font-bold" },
             ]}
             className="mt-4 justify-center"
             cursorClassName="bg-gold"

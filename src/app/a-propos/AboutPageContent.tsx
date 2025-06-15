@@ -24,35 +24,25 @@ const values = [
   {
     icon: <Wrench className="w-8 h-8" />,
     title: "Savoir-faire",
-    description: "38 ans d'expérience et de perfectionnement dans l'art de la menuiserie."
+    description: "2 ans d'expérience et de perfectionnement dans l'art de la menuiserie."
   }
 ];
 
 const milestones = [
   { 
-    year: "1985", 
-    event: "Création de Vanden Menuiserie par Jean Vanden",
-    description: "L'aventure commence dans un petit atelier à Toulon avec des outils traditionnels et une passion immense pour le bois."
-  },
-  { 
-    year: "1995", 
-    event: "Première extension de l'atelier à Toulon",
-    description: "Face au succès croissant, Jean Vanden agrandit son atelier pour diversifier les services et accueillir des projets plus ambitieux."
-  },
-  { 
-    year: "2005", 
-    event: "Mattias Vanden rejoint l'entreprise familiale",
-    description: "Fort de sa formation en ébénisterie, il apporte un souffle moderne tout en respectant la tradition."
-  },
-  { 
-    year: "2015", 
-    event: "Modernisation complète des équipements",
-    description: "Acquisition de machines CNC et logiciels 3D pour une précision inégalée tout en conservant le travail manuel d'exception."
+    year: "2022", 
+    event: "Création de Vanden Menuiserie par Mattias Vanden",
+    description: "L'aventure commence dans un petit atelier à Toulon avec des outils modernes et une passion immense pour le bois."
   },
   { 
     year: "2023", 
-    event: "Plus de 1000 projets réalisés dans le Var",
-    description: "L'entreprise familiale continue d'innover tout en préservant les valeurs qui font sa réputation depuis 38 ans."
+    event: "Premiers grands projets de cuisines sur mesure",
+    description: "Face aux premiers succès, développement de l'expertise en cuisines équipées et aménagements sur mesure."
+  },
+  { 
+    year: "2024", 
+    event: "Extension de la zone d'intervention dans le Var",
+    description: "Élargissement des services à tout le département du Var avec plus de 50 projets réalisés."
   }
 ];
 
@@ -129,7 +119,7 @@ export function AboutPageContent() {
             </h1>
             
             <TextGenerateEffect
-              words="Depuis 1985, nous transformons vos espaces avec passion et savoir-faire. Découvrez l'histoire d'une entreprise familiale dédiée à l'excellence artisanale."
+              words="Depuis 2022, nous transformons vos espaces avec passion et savoir-faire. Découvrez l'histoire d'une entreprise familiale dédiée à l'excellence artisanale."
               className="text-center max-w-4xl mx-auto text-lg md:text-xl text-bleu-marine/70"
             />
           </motion.div>
@@ -142,8 +132,8 @@ export function AboutPageContent() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
           >
             {[
-              { number: "38", label: "Ans d'expérience", suffix: "" },
-              { number: "1000", label: "Projets réalisés", suffix: "+" },
+              { number: "2", label: "Ans d'expérience", suffix: "" },
+              { number: "50", label: "Projets réalisés", suffix: "+" },
               { number: "100", label: "Clients satisfaits", suffix: "%" },
               { number: "10", label: "Ans de garantie", suffix: "" }
             ].map((stat, index) => (
@@ -185,21 +175,20 @@ export function AboutPageContent() {
               </motion.span>
               
               <h2 className="text-4xl font-heading font-bold mb-6 text-bleu-marine">
-                Une entreprise familiale depuis 1985
+                Une entreprise familiale depuis 2022
               </h2>
               <div className="space-y-4 text-bleu-marine/70 leading-relaxed">
                 <p>
-                  Vanden Menuiserie est née de la passion de Jean Vanden pour le travail du bois. 
-                  Installé à Toulon en 1985, il a commencé dans un petit atelier avec une vision simple : 
+                  Vanden Menuiserie est née de la passion de Mattias Vanden pour le travail du bois. 
+                  Installé à Toulon en 2022, il a commencé dans un petit atelier avec une vision simple : 
                   créer des pièces uniques qui durent dans le temps.
                 </p>
                 <p>
-                  Aujourd'hui, c'est son fils Mattias qui perpétue cette tradition d'excellence. 
                   Formé aux techniques traditionnelles tout en maîtrisant les outils modernes, 
-                  il allie savoir-faire ancestral et innovation pour créer des œuvres d'exception.
+                  Mattias allie savoir-faire ancestral et innovation pour créer des œuvres d'exception.
                 </p>
                 <p>
-                  Avec plus de 1000 projets réalisés dans tout le Var, nous sommes fiers d'avoir 
+                  Avec plus de 50 projets déjà réalisés dans le Var, nous sommes fiers d'avoir 
                   contribué à embellir les intérieurs de nos clients, toujours avec la même passion 
                   et le même souci du détail qu'au premier jour.
                 </p>
@@ -427,11 +416,11 @@ export function AboutPageContent() {
                 <div className="text-bleu-marine/70 text-sm">Note moyenne</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-bleu-marine mb-2">150+</div>
+                <div className="text-3xl font-bold text-bleu-marine mb-2">50+</div>
                 <div className="text-bleu-marine/70 text-sm">Avis positifs</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-bleu-marine mb-2">38</div>
+                <div className="text-3xl font-bold text-bleu-marine mb-2">2</div>
                 <div className="text-bleu-marine/70 text-sm">Années d'expérience</div>
               </div>
             </div>

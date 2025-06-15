@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Vanden Menuiserie | Artisan Menuisier dans le Var - Cuisines, Escaliers, Dressings",
-  description: "Vanden Menuiserie, votre artisan menuisier professionnel dans le Var depuis 1985. Spécialisé en cuisines sur mesure, escaliers, dressings et menuiseries. ✆ 07 62 14 43 40",
+  description: "Vanden Menuiserie, votre artisan menuisier professionnel dans le Var depuis 2022. Spécialisé en cuisines sur mesure, escaliers, dressings et menuiseries. ✆ 07 62 14 43 40",
   keywords: [
     "menuisier",
     "menuiserie",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: "https://vanden-menuiserie.fr",
     siteName: "Vanden Menuiserie",
     title: "Vanden Menuiserie | Artisan Menuisier dans le Var",
-    description: "Artisan menuisier professionnel dans le Var depuis 1985. Créateur de cuisines sur mesure, escaliers, dressings et menuiseries d'exception.",
+    description: "Artisan menuisier professionnel dans le Var depuis 2022. Créateur de cuisines sur mesure, escaliers, dressings et menuiseries d'exception.",
     images: [
       {
         url: "/og-image.jpg",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vanden Menuiserie | Artisan Menuisier dans le Var",
-    description: "Artisan menuisier professionnel dans le Var depuis 1985. Spécialisé en cuisines sur mesure, escaliers et dressings.",
+    description: "Artisan menuisier professionnel dans le Var depuis 2022. Spécialisé en cuisines sur mesure, escaliers et dressings.",
     images: ["/og-image.jpg"],
   },
   alternates: {

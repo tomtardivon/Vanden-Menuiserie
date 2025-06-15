@@ -4,7 +4,7 @@ import { ProjectsGallery } from "@/components/sections/ProjectsGallery";
 
 export const metadata: Metadata = {
   title: "Menuisier à La Seyne-sur-Mer (83500) | Vanden Menuiserie - Devis Gratuit",
-  description: "Vanden Menuiserie, votre menuisier professionnel à La Seyne-sur-Mer. Projets familiaux, rangements optimisés, espaces enfants. 38 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
+  description: "Vanden Menuiserie, votre menuisier professionnel à La Seyne-sur-Mer. Projets familiaux, rangements optimisés, espaces enfants. 2 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
   keywords: [
     "menuisier la seyne sur mer",
     "cuisine familiale la seyne",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Menuisier La Seyne-sur-Mer - Vanden Menuiserie",
-    description: "Artisan menuisier à La Seyne-sur-Mer depuis 1985. Spécialisé en projets familiaux, rangements optimisés et espaces enfants.",
+    description: "Artisan menuisier à La Seyne-sur-Mer depuis 2022. Spécialisé en projets familiaux, rangements optimisés et espaces enfants.",
     images: ["/og/menuisier-la-seyne.jpg"],
     url: "https://vanden-menuiserie.fr/menuisier-la-seyne",
   },
@@ -45,7 +45,7 @@ export default function MenuisierLaSeyne() {
                 </h1>
                 
                 <p className="text-xl text-bleu-marine/80 mb-8 leading-relaxed">
-                  Vanden Menuiserie, votre artisan menuisier de confiance à La Seyne-sur-Mer depuis plus de 38 ans. 
+                  Vanden Menuiserie, votre artisan menuisier de confiance à La Seyne-sur-Mer depuis 2 ans. 
                   Spécialisé dans les solutions familles, rangements optimisés et espaces enfants.
                 </p>
                 
@@ -96,7 +96,7 @@ export default function MenuisierLaSeyne() {
             
             <div className="prose prose-lg max-w-none">
               <p className="text-bleu-marine/80 leading-relaxed mb-6">
-                Vanden Menuiserie intervient à La Seyne-sur-Mer et ses quartiers depuis plus de 38 ans. 
+                Vanden Menuiserie intervient à La Seyne-sur-Mer et ses quartiers depuis 2022. 
                 Nous comprenons parfaitement les besoins des familles seynoises et créons des solutions 
                 sur mesure qui facilitent le quotidien de chacun.
               </p>
@@ -159,7 +159,7 @@ export default function MenuisierLaSeyne() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5",
-              "reviewCount": "38"
+              "reviewCount": "2"
             }
           })
         }}

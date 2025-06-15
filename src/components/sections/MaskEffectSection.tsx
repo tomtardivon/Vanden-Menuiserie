@@ -15,9 +15,9 @@ export const MaskEffectSection = () => {
             </p>
             <div className="mt-8">
               <p className="text-lg text-bleu-marine/80 leading-relaxed">
-                Depuis 1985, nous transformons vos idées en réalisations uniques.
-                Chaque création est le fruit d'un savoir-faire transmis de génération
-                en génération, alliant techniques traditionnelles et innovations modernes.
+                Depuis 2022, nous transformons vos idées en réalisations uniques.
+                Chaque création est le fruit d'un savoir-faire moderne,
+                alliant techniques traditionnelles et innovations contemporaines.
               </p>
             </div>
           </div>

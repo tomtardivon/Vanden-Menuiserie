@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { CrossPattern } from "@/components/ui/cross-pattern";
 import { GridPattern } from "@/components/ui/grid-pattern";
+import { PlusPattern } from "@/components/ui/plus-pattern";
+import { HexagonalPattern } from "@/components/ui/hexagonal-pattern";
+import { WavePattern } from "@/components/ui/wave-pattern";
+import { OrganicPattern } from "@/components/ui/organic-pattern";
 import { GridBeam } from "@/components/ui/grid-beam";
 import { Copy, Download, Palette, Type, Layout, Layers } from "lucide-react";
 
@@ -18,12 +22,12 @@ export default function CharteGraphiquePage() {
     { name: "Gris perle", hex: "#F8F9FA", css: "bg-gris-perle", usage: "Sections techniques, Projets, Stats, FAQ", category: "Actuelle" },
     { name: "Bleu marine", hex: "#1E2B39", css: "bg-bleu-marine", usage: "CTA, Footer, Navigation, Textes", category: "Actuelle" },
     { name: "Brun bois", hex: "#A67C52", css: "bg-brun-bois", usage: "Accents, Hover, Boutons secondaires", category: "Actuelle" },
-    
+
     // Palette originale du cahier des charges
     { name: "Beige clair", hex: "#F5F1E6", css: "bg-beige-clair", usage: "Fond principal très doux (CDC)", category: "Originale CDC" },
     { name: "Gris doux", hex: "#E8E8E8", css: "bg-gris-doux", usage: "Sections, icônes secondaires (CDC)", category: "Originale CDC" },
     { name: "Blanc cassé", hex: "#FEFEFE", css: "bg-blanc-casse", usage: "Hover léger, contrepoints visuels (CDC)", category: "Originale CDC" },
-    
+
     // Couleurs supplémentaires inspirées bois/nature
     { name: "Chêne naturel", hex: "#D2B48C", css: "bg-chene-naturel", usage: "Textures bois, éléments naturels", category: "Extension" },
     { name: "Noyer foncé", hex: "#8B6F47", css: "bg-noyer-fonce", usage: "Accents premium, bois noble", category: "Extension" },
@@ -35,10 +39,10 @@ export default function CharteGraphiquePage() {
 
   const typography = [
     { name: "Playfair Display", class: "font-heading", example: "Vanden Menuiserie", usage: "Titres principaux, Headers, Signatures", description: "Serif élégant, style éditorial" },
-    { name: "Inter", class: "font-sans", example: "Artisan menuisier depuis 1985", usage: "Texte courant, Interface", description: "Sans-serif moderne et lisible" },
-    { name: "Lora", class: "font-serif", example: "Savoir-faire artisanal", usage: "Citations, Témoignages", description: "Serif chaleureux pour les contenus éditoriaux" },
-    { name: "Cormorant Garamond", class: "font-serif", example: "Menuiserie d'Exception", usage: "Titres prestigieux (Option CDC)", description: "Serif classique et raffiné" },
-    { name: "Mono", class: "font-mono", example: "SIREN: 920 023 363", usage: "Données techniques, Code", description: "Monospace pour les informations précises" }
+/*     { name: "Inter", class: "font-sans", example: "Artisan menuisier depuis 2022", usage: "Texte courant, Interface", description: "Sans-serif moderne et lisible" },
+    { name: "Lora", class: "font-serif", example: "Savoir-faire artisanal", usage: "Citations, Témoignages", description: "Serif chaleureux pour les contenus éditoriaux" }, */
+/*     { name: "Cormorant Garamond", class: "font-serif", example: "Menuiserie d'Exception", usage: "Titres prestigieux (Option CDC)", description: "Serif classique et raffiné" },
+ */    { name: "Mono", class: "font-mono", example: "SIREN: 920 023 363", usage: "Données techniques, Code", description: "Monospace pour les informations précises" }
   ];
 
   return (
@@ -59,7 +63,7 @@ export default function CharteGraphiquePage() {
             Charte Graphique
           </h1>
           <p className="text-xl text-bleu-marine/70 max-w-3xl mx-auto">
-            Guide complet de l'identité visuelle de Vanden Menuiserie. 
+            Guide complet de l'identité visuelle de Vanden Menuiserie.
             Couleurs, typographies, patterns et composants.
           </p>
         </motion.div>
@@ -127,7 +131,7 @@ export default function CharteGraphiquePage() {
                   {category === "Extension" && "Couleurs inspirées bois/nature pour enrichir la palette"}
                 </p>
               </motion.div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {colors.filter(color => color.category === category).map((color, index) => (
                   <motion.div
@@ -140,13 +144,13 @@ export default function CharteGraphiquePage() {
                   >
                     <div className="bg-white rounded-2xl border shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
                       {/* Échantillon couleur avec texture décorative */}
-                      <div 
+                      <div
                         className="h-32 relative overflow-hidden"
                         style={{ backgroundColor: color.hex }}
                       >
                         {/* Texture décorative bois subtile */}
                         <div className="absolute inset-0 opacity-10">
-                          <div 
+                          <div
                             className="w-full h-full"
                             style={{
                               backgroundImage: `repeating-linear-gradient(
@@ -159,7 +163,7 @@ export default function CharteGraphiquePage() {
                             }}
                           />
                         </div>
-                        
+
                         {/* Overlay d'action */}
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-gradient-to-t from-black/30 to-transparent flex items-center justify-center">
                           <button
@@ -170,7 +174,7 @@ export default function CharteGraphiquePage() {
                             Copier
                           </button>
                         </div>
-                        
+
                         {/* Badge catégorie */}
                         <div className="absolute top-2 right-2">
                           <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full font-medium">
@@ -178,7 +182,7 @@ export default function CharteGraphiquePage() {
                           </span>
                         </div>
                       </div>
-                      
+
                       {/* Informations enrichies */}
                       <div className="p-6">
                         <h3 className="font-heading font-bold text-lg text-bleu-marine mb-2 flex items-center justify-between">
@@ -243,7 +247,7 @@ export default function CharteGraphiquePage() {
                 <div className="absolute top-0 right-0 w-32 h-32 opacity-5 group-hover:opacity-10 transition-opacity">
                   <div className="w-full h-full bg-gradient-to-br from-brun-bois to-transparent rounded-full transform rotate-12 scale-150"></div>
                 </div>
-                
+
                 <div className="grid lg:grid-cols-3 gap-6 items-center relative">
                   <div>
                     <div className="flex items-center gap-3 mb-3">
@@ -284,7 +288,7 @@ export default function CharteGraphiquePage() {
                       <div className="text-sm text-bleu-marine/50">
                         {font.example}
                       </div>
-                      
+
                       {/* Démonstration de styles pour Playfair */}
                       {font.name === "Playfair Display" && (
                         <div className="pt-4 border-t border-gris-perle">
@@ -303,7 +307,7 @@ export default function CharteGraphiquePage() {
                             </div>
                             <div>
                               <p className="text-xs text-bleu-marine/60 mb-1 font-bold uppercase tracking-wide">Small Caps</p>
-                              <p className={`${font.class} text-lg font-semibold`} style={{fontVariant: 'small-caps'}}>Pierrefeu-du-Var</p>
+                              <p className={`${font.class} text-lg font-semibold`} style={{ fontVariant: 'small-caps' }}>Pierrefeu-du-Var</p>
                             </div>
                           </div>
                         </div>
@@ -313,7 +317,7 @@ export default function CharteGraphiquePage() {
                 </div>
               </motion.div>
             ))}
-            
+
             {/* Section décorative des tailles standardisées */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -361,35 +365,63 @@ export default function CharteGraphiquePage() {
               Patterns de Fond
             </h2>
             <p className="text-bleu-marine/70 text-lg">
-              Patterns CSS optimisés pour enrichir vos arrière-plans avec subtilité.
+              Patterns SVG optimisés de qualité professionnelle pour enrichir vos arrière-plans avec subtilité.
             </p>
           </motion.div>
 
           {/* Patterns sur blanc */}
           <div className="mb-12">
             <h3 className="text-2xl font-heading font-bold text-bleu-marine mb-6">
-              Fonds clairs avec patterns subtils
+              🎨 Patterns Premium - Fonds clairs
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { 
-                  name: "Dots", 
-                  props: { size: 1.5, spacing: 25, color: "#1E2B39", fade: true },
+                {
+                  name: "Dots",
+                  description: "Points SVG haute qualité",
+                  props: { dotSize: 1.2, gap: 15, dotColor: "#1E2B39", fade: true, opacity: 0.3 },
                   render: (props: any) => <DotPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
                 },
-                { 
-                  name: "Cross", 
-                  props: { size: 1, spacing: 30, color: "#1E2B39", fade: true },
+                {
+                  name: "Cross",
+                  description: "Croix Hero Patterns",
+                  props: { crossSize: 40, crossColor: "#1E2B39", fade: true, opacity: 0.25 },
                   render: (props: any) => <CrossPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
                 },
-                { 
-                  name: "Grid", 
-                  props: { size: 25, strokeWidth: 1, color: "#1E2B39", fade: true },
+                {
+                  name: "Grid",
+                  description: "Grille vectorielle nette",
+                  props: { cellSize: "25px", strokeWidth: "1px", color: "#1E2B39", fade: true, opacity: 0.3 },
                   render: (props: any) => <GridPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
                 },
-                { 
-                  name: "Beam", 
-                  props: { className: "opacity-30" },
+                {
+                  name: "Plus",
+                  description: "Pattern plus sophistiqué",
+                  props: { plusSize: 60, plusColor: "#1E2B39", fade: true, opacity: 0.2 },
+                  render: (props: any) => <PlusPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                {
+                  name: "Hexagonal",
+                  description: "Géométrie hexagonale",
+                  props: { size: 40, color: "#1E2B39", variant: "outline", fade: true, opacity: 0.15 },
+                  render: (props: any) => <HexagonalPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                {
+                  name: "Wave",
+                  description: "Ondulations organiques",
+                  props: { amplitude: 20, frequency: 80, color: "#1E2B39", variant: "sine", fade: true, opacity: 0.2 },
+                  render: (props: any) => <WavePattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                {
+                  name: "Wood",
+                  description: "Texture bois naturel",
+                  props: { scale: 60, color: "#A67C52", variant: "wood", fade: true, opacity: 0.12 },
+                  render: (props: any) => <OrganicPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                {
+                  name: "Beam",
+                  description: "Faisceaux animés",
+                  props: { color: "#A67C52", variant: "vertical", speed: 3, className: "opacity-40" },
                   render: (props: any) => <GridBeam {...props}><div /></GridBeam> // eslint-disable-line @typescript-eslint/no-explicit-any
                 }
               ].map((pattern, index) => (
@@ -405,17 +437,17 @@ export default function CharteGraphiquePage() {
                   <div className="relative z-10 p-6 flex flex-col justify-between h-full">
                     <div>
                       <h4 className="font-heading font-bold text-bleu-marine mb-2">
-                        {pattern.name} Pattern
+                        {pattern.name}
                       </h4>
                       <p className="text-sm text-bleu-marine/70">
-                        Pattern subtil pour fonds clairs
+                        {pattern.description}
                       </p>
                     </div>
                     <button
                       onClick={() => copyToClipboard(`<${pattern.name}Pattern ${Object.entries(pattern.props).map(([key, value]) => `${key}={${JSON.stringify(value)}}`).join(' ')} />`)}
                       className="self-start mt-4 bg-bleu-marine/10 hover:bg-bleu-marine/20 text-bleu-marine px-3 py-1 rounded-full text-xs font-medium opacity-0 group-hover:opacity-100 transition-all"
                     >
-                      Copier le code
+                      Copier SVG
                     </button>
                   </div>
                 </motion.div>
@@ -426,29 +458,57 @@ export default function CharteGraphiquePage() {
           {/* Patterns sur sombre */}
           <div>
             <h3 className="text-2xl font-heading font-bold text-bleu-marine mb-6">
-              Fonds sombres avec patterns lumineux
+              ✨ Patterns Premium - Fonds sombres
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { 
-                  name: "Dots", 
-                  props: { size: 3, spacing: 20, color: "#FFFFFF", fade: false },
+                {
+                  name: "Dots Gold",
+                  description: "Points dorés élégants",
+                  props: { dotSize: 1.5, gap: 18, dotColor: "#D4AF37", fade: false, opacity: 0.6 },
                   render: (props: any) => <DotPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
                 },
-                { 
-                  name: "Cross", 
-                  props: { size: 3, spacing: 20, color: "#FFD700", fade: false },
+                {
+                  name: "Cross Bois",
+                  description: "Croix ton bois",
+                  props: { crossSize: 40, crossColor: "#A67C52", fade: false, opacity: 0.5 },
                   render: (props: any) => <CrossPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
                 },
-                { 
-                  name: "Grid", 
-                  props: { size: 15, strokeWidth: 2, color: "#FFFFFF", fade: false },
+                {
+                  name: "Grid White",
+                  description: "Grille blanc pur",
+                  props: { cellSize: "20px", strokeWidth: "1px", color: "#FFFFFF", fade: false, opacity: 0.4 },
                   render: (props: any) => <GridPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
                 },
-                { 
-                  name: "Dots Cyan", 
-                  props: { size: 2, spacing: 25, color: "#00FFFF", fade: false },
-                  render: (props: any) => <DotPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                {
+                  name: "Plus Copper",
+                  description: "Plus cuivré",
+                  props: { plusSize: 50, plusColor: "#B87333", fade: false, opacity: 0.4 },
+                  render: (props: any) => <PlusPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                {
+                  name: "Hex Honey",
+                  description: "Hexagones miel",
+                  props: { size: 35, color: "#FFD700", variant: "honeycomb", fade: false, opacity: 0.3 },
+                  render: (props: any) => <HexagonalPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                {
+                  name: "Wave Cream",
+                  description: "Vagues crème",
+                  props: { amplitude: 15, frequency: 70, color: "#F5F5DC", variant: "organic", fade: false, opacity: 0.25 },
+                  render: (props: any) => <WavePattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                {
+                  name: "Marble",
+                  description: "Marbre naturel",
+                  props: { scale: 50, color: "#E8E8E8", variant: "marble", fade: false, opacity: 0.2 },
+                  render: (props: any) => <OrganicPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                {
+                  name: "Beam Cross",
+                  description: "Faisceaux croisés",
+                  props: { color: "#FFD700", variant: "cross", speed: 4, className: "opacity-60" },
+                  render: (props: any) => <GridBeam {...props}><div /></GridBeam> // eslint-disable-line @typescript-eslint/no-explicit-any
                 }
               ].map((pattern, index) => (
                 <motion.div
@@ -464,17 +524,17 @@ export default function CharteGraphiquePage() {
                   <div className="relative z-10 p-6 flex flex-col justify-between h-full">
                     <div>
                       <h4 className="font-heading font-bold text-white mb-2">
-                        {pattern.name} Pattern
+                        {pattern.name}
                       </h4>
                       <p className="text-sm text-white/70">
-                        Pattern lumineux pour fonds sombres
+                        {pattern.description}
                       </p>
                     </div>
                     <button
                       onClick={() => copyToClipboard(`<${pattern.name.split(' ')[0]}Pattern ${Object.entries(pattern.props).map(([key, value]) => `${key}={${JSON.stringify(value)}}`).join(' ')} />`)}
                       className="self-start mt-4 bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium opacity-0 group-hover:opacity-100 transition-all"
                     >
-                      Copier le code
+                      Copier SVG
                     </button>
                   </div>
                 </motion.div>
@@ -603,7 +663,7 @@ export default function CharteGraphiquePage() {
             >
               <h4 className="font-heading font-bold text-bleu-marine mb-4">🌳 Textures Bois</h4>
               <div className="space-y-4">
-                <div className="h-16 rounded-lg relative overflow-hidden" style={{backgroundColor: '#D2B48C'}}>
+                <div className="h-16 rounded-lg relative overflow-hidden" style={{ backgroundColor: '#D2B48C' }}>
                   <div className="absolute inset-0" style={{
                     backgroundImage: `repeating-linear-gradient(90deg, 
                       rgba(139, 69, 19, 0.1) 0px, 
@@ -615,7 +675,7 @@ export default function CharteGraphiquePage() {
                     <span className="text-bleu-marine font-medium text-sm">Veinage chêne</span>
                   </div>
                 </div>
-                <div className="h-16 rounded-lg relative overflow-hidden" style={{backgroundColor: '#8B6F47'}}>
+                <div className="h-16 rounded-lg relative overflow-hidden" style={{ backgroundColor: '#8B6F47' }}>
                   <div className="absolute inset-0" style={{
                     backgroundImage: `repeating-linear-gradient(45deg, 
                       rgba(139, 69, 19, 0.2) 0px, 
@@ -664,7 +724,7 @@ export default function CharteGraphiquePage() {
               <h4 className="font-heading font-bold mb-4">✨ Effets Premium</h4>
               <div className="space-y-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-                  <span className="text-sm">Glassmorphism</span>
+                  <span className="text-sm text-white">Glassmorphism</span>
                 </div>
                 <div className="bg-gradient-to-r from-brun-bois to-gold text-white rounded-lg p-3 shadow-lg">
                   <span className="text-sm font-bold">Gradient Gold</span>
@@ -687,7 +747,7 @@ export default function CharteGraphiquePage() {
               <div className="space-y-3">
                 {[2, 4, 6, 8, 12, 16, 20, 24].map((space) => (
                   <div key={space} className="flex items-center gap-3">
-                    <div 
+                    <div
                       className="bg-brun-bois rounded"
                       style={{ width: `${space * 2}px`, height: '8px' }}
                     ></div>
@@ -754,7 +814,7 @@ export default function CharteGraphiquePage() {
                   <span className="text-sm font-bold">PREMIUM</span>
                 </div>
                 <div className="bg-white border border-gris-doux text-bleu-marine px-4 py-2 rounded-full text-center">
-                  <span className="text-sm font-bold">DEPUIS 1985</span>
+                  <span className="text-sm font-bold">DEPUIS 2022</span>
                 </div>
               </div>
             </motion.div>
@@ -770,7 +830,7 @@ export default function CharteGraphiquePage() {
         >
           {/* Texture décorative d'arrière-plan */}
           <div className="absolute inset-0 opacity-10">
-            <div 
+            <div
               className="w-full h-full"
               style={{
                 backgroundImage: `repeating-linear-gradient(
@@ -783,21 +843,21 @@ export default function CharteGraphiquePage() {
               }}
             />
           </div>
-          
+
           <div className="relative">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <span className="text-xl">🎨</span>
               <span className="text-sm font-medium">Design System Complet</span>
             </div>
-            
+
             <h3 className="text-4xl font-heading font-bold mb-4">
               Charte Graphique Vanden Menuiserie
             </h3>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto text-lg">
-              Cette charte garantit une identité visuelle cohérente et professionnelle 
+              Cette charte garantit une identité visuelle cohérente et professionnelle
               sur tous les supports de communication. Artisanat moderne, élégance intemporelle.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-bleu-marine px-8 py-4 rounded-full font-bold hover:bg-beige-moderne transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 <Download className="w-5 h-5 inline mr-2" />
@@ -808,7 +868,7 @@ export default function CharteGraphiquePage() {
                 Partager la charte
               </button>
             </div>
-            
+
             <div className="mt-8 pt-8 border-t border-white/20">
               <p className="text-white/60 text-sm">
                 © 2024 Vanden Menuiserie • Design System v2.0 • Mattias Vandenkoornhuyse

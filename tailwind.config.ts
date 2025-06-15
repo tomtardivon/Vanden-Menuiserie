@@ -41,10 +41,11 @@ const config: Config = {
         // Vanden Menuiserie colors - Palette 4 couleurs
         'bleu-marine': 'var(--bleu-marine)',
         'beige-moderne': 'var(--beige-moderne)',
-        'brun-bois': 'var(--brun-bois)',
+        'brun-bois': '#A67C52',
         'gris-perle': 'var(--gris-perle)',
         'blanc-pur': 'var(--blanc-pur)',
         'terracotta': 'var(--terracotta)',
+        'gold': '#D4AF37',
       },
       fontFamily: {
         'heading': ['var(--font-playfair)', 'serif'],
