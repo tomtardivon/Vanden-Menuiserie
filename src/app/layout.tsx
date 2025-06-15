@@ -3,6 +3,8 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { Navigation } from "@/components/navigation/Navigation";
 import { Footer } from "@/components/footer/Footer";
 import { SimplePageTransition } from "@/components/ui/simple-page-transition";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 
 const inter = Inter({
@@ -128,6 +130,8 @@ export default function RootLayout({
           {children}
         </SimplePageTransition>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
