@@ -143,7 +143,7 @@ export const ServicesSection = () => {
                           fill
                           className="object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent lg:hidden" />
+                        <div className="absolute inset-0 bg-bleu-marine/50 lg:hidden" />
                       </div>
 
                       <div className="p-6 lg:p-10 flex flex-col justify-center">

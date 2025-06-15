@@ -95,7 +95,7 @@ export const AnimatedButton = ({
   const variantClasses = {
     primary: "bg-bleu-marine text-white hover:bg-brun-bois shadow-lg hover:shadow-xl",
     secondary: "border-2 border-bleu-marine text-bleu-marine hover:bg-bleu-marine hover:text-white",
-    gradient: "bg-gradient-to-r from-wood-dark to-gold text-white hover:from-gold hover:to-wood-dark shadow-lg hover:shadow-xl"
+    gradient: "bg-bleu-marine text-white hover:bg-brun-bois shadow-lg hover:shadow-xl"
   };
 
   return (

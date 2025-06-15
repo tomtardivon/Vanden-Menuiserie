@@ -138,7 +138,7 @@ export const ProjectsGallery = () => {
   }).slice(0, 6);
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-gris-perle/50 via-white to-gris-perle/30">
+    <section className="py-16 lg:py-24 bg-gris-perle">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           className="text-center mb-12 lg:mb-16"
@@ -152,7 +152,7 @@ export const ProjectsGallery = () => {
           
           <h2 className="text-4xl lg:text-6xl xl:text-7xl font-heading font-bold text-bleu-marine mb-4 lg:mb-6 leading-tight">
             Nos réalisations
-            <span className="block bg-gradient-to-r from-brun-bois to-gold bg-clip-text text-transparent">
+            <span className="block text-brun-bois">
               d'exception
             </span>
           </h2>

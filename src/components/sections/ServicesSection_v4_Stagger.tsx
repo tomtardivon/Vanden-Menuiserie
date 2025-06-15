@@ -31,7 +31,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent md:hidden" />
+            <div className="absolute inset-0 bg-bleu-marine/50 md:hidden" />
           </div>
 
           <div className="p-8 lg:p-12">

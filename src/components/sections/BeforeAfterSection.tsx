@@ -164,7 +164,7 @@ export const BeforeAfterSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
         >
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12 shadow-lg">
+          <div className="bg-gris-perle rounded-3xl p-12 shadow-lg">
             <h3 className="text-3xl font-heading font-bold text-bleu-marine mb-6">
               Votre projet de rénovation vous attend
             </h3>

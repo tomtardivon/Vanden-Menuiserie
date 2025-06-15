@@ -8,29 +8,46 @@ import { VelocityScrollSection } from "@/components/sections/VelocityScrollSecti
 import { TextRevealSection } from "@/components/sections/TextRevealSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { InfiniteTestimonialsSection } from "@/components/sections/InfiniteTestimonialsSection";
+
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { CraftsmanshipSection } from "@/components/sections/CraftsmanshipSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { MaterialsSection } from "@/components/sections/MaterialsSection";
 import { SustainabilitySection } from "@/components/sections/SustainabilitySection";
 import { MaskEffectSection } from "@/components/sections/MaskEffectSection";
-import ZoomParallax from "@/components/edil-ozi/zoom-parallax";
 
 export default function Home() {
   return (
     <main className="relative">
-      {/* Hero - Introduction (blanc) */}
+      {/* Hero - Introduction */}
       <HeroSection />
-
       {/* Engagement écologique (gris) */}
       <SustainabilitySection />
 
       <MaskEffectSection />
 
-      {/* Excellence artisanale (blanc) */}
-      <CraftsmanshipSection />
 
       {/* Services offerts (blanc) */}
       <ServicesSection />
+
+      {/* Excellence artisanale */}
+      <CraftsmanshipSection />
+
+      {/* Section projets épurée */}
+      <ProjectsSection />
+
+      {/* Section "Pourquoi nous choisir" */}
+      <WhyChooseUsSection />
+
+      {/* Section "Notre processus" */}
+      <ProcessSection />
+
+      {/* Section "Nos matériaux" */}
+      <MaterialsSection />
+
 
       {/* Vision et valeurs (gris) */}
       {/*     <TextRevealSection /> */}
@@ -41,22 +58,19 @@ export default function Home() {
       {/* Projets récents (gris) */}
       <ProjectsGallery />
 
-      {/* Zoom parallax des réalisations */}
-      <ZoomParallax />
-
       {/* Avant/Après transformations (blanc) */}
       <BeforeAfterSection />
 
       {/* Portfolio avec parallax (gris) */}
       <HeroParallaxSection />
 
-      {/* Témoignages clients (blanc) */}
+      {/* Témoignages clients */}
       <TestimonialsSection />
 
-      {/* Questions fréquentes (blanc) */}
+      {/* Questions fréquentes */}
       <FAQSection />
 
-      {/* Appel à l'action final (noir) */}
+      {/* Appel à l'action final */}
       <CTASection />
     </main>
   );

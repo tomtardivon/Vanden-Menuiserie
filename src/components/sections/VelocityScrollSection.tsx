@@ -33,8 +33,8 @@ export function VelocityScrollSection() {
       </VelocityScroll>
 
       <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-beige-moderne to-transparent z-10"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-beige-moderne to-transparent z-10"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-beige-moderne z-10"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-beige-moderne z-10"></div>
         
 {/*         <VelocityScroll
           defaultVelocity={2}

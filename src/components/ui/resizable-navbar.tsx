@@ -145,6 +145,26 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
                       { visible }
                     );
                   }
+                  // Handle double nested elements (div > div > NavbarButton)
+                  if (React.isValidElement(nestedChild) && nestedChild.props && nestedChild.props.children) {
+                    return React.cloneElement(nestedChild, {
+                      children: React.Children.map(
+                        nestedChild.props.children,
+                        (doubleNestedChild) => {
+                          if (
+                            React.isValidElement(doubleNestedChild) &&
+                            (doubleNestedChild.type === NavbarButton)
+                          ) {
+                            return React.cloneElement(
+                              doubleNestedChild as React.ReactElement<{ visible?: boolean }>,
+                              { visible }
+                            );
+                          }
+                          return doubleNestedChild;
+                        }
+                      ),
+                    });
+                  }
                   return nestedChild;
                 }
               ),
@@ -307,7 +327,7 @@ export const MobileNavToggle = ({
 }) => {
   const iconClass = cn(
     "h-6 w-6 cursor-pointer transition-colors",
-    visible ? "text-bleu-marine" : "text-white"
+    visible ? "text-bleu-marine" : "text-bleu-marine"
   );
 
   return isOpen ? (
@@ -323,21 +343,28 @@ export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
     >
-      <div className="w-10 h-10 relative">
+      <div className="w-10 h-10 relative flex-shrink-0">
         <img
           src="/logo-whitout-background.png"
           alt="Vanden Menuiserie"
           className="w-full h-full object-contain"
         />
       </div>
-      <span
-        className={cn(
-          "font-heading font-bold transition-colors",
-          visible ? "text-bleu-marine" : "text-white"
+      <AnimatePresence mode="wait">
+        {!visible && (
+          <motion.span
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -10 }}
+            transition={{ duration: 0.2 }}
+            className={cn(
+              "font-heading font-bold text-bleu-marine whitespace-nowrap"
+            )}
+          >
+            Vanden Menuiserie
+          </motion.span>
         )}
-      >
-        Vanden
-      </span>
+      </AnimatePresence>
     </Link>
   );
 };
@@ -362,7 +389,7 @@ export const NavbarButton = ({
   | React.ComponentPropsWithoutRef<"button">
 )) => {
   const baseStyles =
-    "px-4 py-2 rounded-md text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
+    "px-4 py-2 rounded-full text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
   const variantStyles = {
     primary: visible 
@@ -374,7 +401,7 @@ export const NavbarButton = ({
     dark: "bg-bleu-marine text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
     gradient: visible
       ? "bg-bleu-marine text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]"
-      : "bg-white/20 backdrop-blur-md text-white border border-white/30 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
+      : "bg-bleu-marine text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
   return (

@@ -51,7 +51,7 @@ const Card3D = ({ service, index }: { service: any; index: number }) => {
         transformStyle: "preserve-3d",
       }}
     >
-      <div className="relative h-full w-full rounded-3xl overflow-hidden bg-gradient-to-br from-white to-gris-perle shadow-2xl transform-gpu transition-all duration-300 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]">
+      <div className="relative h-full w-full rounded-3xl overflow-hidden bg-white shadow-2xl transform-gpu transition-all duration-300 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]">
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-white/10" />
         
         <div className="relative h-48 overflow-hidden">
@@ -121,7 +121,7 @@ const Card3D = ({ service, index }: { service: any; index: number }) => {
             {service.features.map((feature: string, idx: number) => (
               <motion.span
                 key={idx}
-                className="px-3 py-1 bg-gradient-to-r from-brun-bois/10 to-gold/10 rounded-full text-xs text-bleu-marine font-medium"
+                className="px-3 py-1 bg-beige-moderne rounded-full text-xs text-bleu-marine font-medium"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 + idx * 0.1 }}

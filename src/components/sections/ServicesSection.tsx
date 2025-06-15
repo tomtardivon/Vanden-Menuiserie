@@ -37,7 +37,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent lg:hidden" />
+            <div className="absolute inset-0 bg-bleu-marine/50 lg:hidden" />
           </div>
 
           <div className="p-6 lg:p-10">
@@ -48,7 +48,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               transition={{ delay: 0.3 + index * 0.1 }}
               className="inline-flex items-center gap-2 lg:gap-3 mb-4 lg:mb-6"
             >
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-brun-bois/20 to-gold/20 rounded-xl lg:rounded-2xl flex items-center justify-center">
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-beige-moderne rounded-xl lg:rounded-2xl flex items-center justify-center">
                 {service.icon}
               </div>
               <span className="text-xs lg:text-sm font-medium text-brun-bois uppercase tracking-wider">
@@ -177,7 +177,7 @@ export const ServicesSection = () => {
   return (
     <section ref={sectionRef} className="relative py-16 lg:py-24">
       <motion.div
-        className="absolute inset-0 bg-gradient-to-b from-gris-perle/30 via-white to-gris-perle/30"
+        className="absolute inset-0 bg-gris-perle/30"
         style={{
           y: backgroundY,
           opacity: backgroundOpacity

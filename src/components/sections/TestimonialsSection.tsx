@@ -195,7 +195,7 @@ export const TestimonialsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white"
+          className="text-center bg-bleu-marine rounded-3xl p-12 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">
             Rejoignez nos clients satisfaits

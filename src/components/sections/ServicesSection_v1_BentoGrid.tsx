@@ -58,7 +58,7 @@ export const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-gris-perle/30 to-white">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           className="text-center mb-16"
@@ -73,7 +73,7 @@ export const ServicesSection = () => {
           
           <h2 className="text-5xl lg:text-7xl font-heading font-bold text-bleu-marine mb-6">
             Un savoir-faire
-            <span className="block bg-gradient-to-r from-brun-bois to-gold bg-clip-text text-transparent">
+            <span className="block text-brun-bois">
               d'exception
             </span>
           </h2>

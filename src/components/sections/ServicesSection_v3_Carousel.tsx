@@ -97,7 +97,7 @@ export const ServicesSection = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gris-perle/30 overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           className="text-center mb-12"

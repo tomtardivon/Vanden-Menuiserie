@@ -1,46 +1,30 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
+import { HyeresPageContent } from '@/components/pages/HyeresPageContent';
 
 export const metadata: Metadata = {
-  title: "Menuisier Hyères | Vanden Menuiserie - Artisan Professionnel",
-  description: "Menuisier professionnel à Hyères. Vanden Menuiserie vous accompagne dans tous vos projets de menuiserie : cuisines, dressings, escaliers. Devis gratuit.",
-  keywords: "menuisier hyères, menuiserie hyères, cuisine sur mesure hyères, artisan bois hyères",
+  title: "Menuisier à Hyères (83400) | Vanden Menuiserie - Devis Gratuit",
+  description: "Vanden Menuiserie, votre menuisier professionnel à Hyères. Cuisines sur mesure, terrasses bois, meubles d'exception. 38 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
+  keywords: [
+    "menuisier hyères",
+    "cuisine sur mesure hyères",
+    "terrasse bois hyères",
+    "menuiserie hyères",
+    "artisan menuisier hyères",
+    "ébéniste hyères",
+    "dressing hyères",
+    "villa hyères"
+  ],
+  openGraph: {
+    title: "Menuisier Hyères - Vanden Menuiserie",
+    description: "Artisan menuisier à Hyères depuis 1985. Spécialisé en villas de standing, terrasses bois et meubles sur mesure.",
+    images: ["/og/menuisier-hyeres.jpg"],
+    url: "https://vanden-menuiserie.fr/menuisier-hyeres",
+  },
+  alternates: {
+    canonical: "https://vanden-menuiserie.fr/menuisier-hyeres",
+  },
 };
 
-export default function MenuisierHyeresPage() {
-  return (
-    <div className="min-h-screen bg-white pt-20">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-center">
-          Menuisier à Hyères
-        </h1>
-        <p className="text-xl text-bleu-marine/70 mb-8 text-center leading-relaxed">
-          Votre artisan menuisier de confiance à Hyères et ses environs. 
-          Spécialisé dans la création de menuiseries sur mesure depuis 1985.
-        </p>
-        
-        <div className="prose max-w-none">
-          <h2 className="text-2xl font-bold mb-4">Nos services à Hyères</h2>
-          <ul className="space-y-2">
-            <li>• Cuisines sur mesure</li>
-            <li>• Dressings et placards</li>
-            <li>• Escaliers en bois</li>
-            <li>• Terrasses et pergolas</li>
-            <li>• Menuiseries intérieures et extérieures</li>
-          </ul>
-          
-          <h2 className="text-2xl font-bold mb-4 mt-8">Zone d&apos;intervention</h2>
-          <p>Nous intervenons à Hyères et dans toutes les communes environnantes du Var.</p>
-          
-          <div className="mt-12 text-center">
-            <a 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-bleu-marine text-white rounded-full hover:bg-brun-bois transition-colors"
-            >
-              Demander un devis gratuit
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+export default function MenuisierHyeres() {
+  return <HyeresPageContent />;
 }

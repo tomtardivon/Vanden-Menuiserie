@@ -131,7 +131,7 @@ const SimpleImage = ({ card }: { card: Card }) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-400 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gris-perle flex items-center justify-center">
           <div className="text-center text-bleu-marine/70">
             <div className="text-4xl mb-2">🏠</div>
             <div className="text-sm font-medium">Projet #{card.id}</div>

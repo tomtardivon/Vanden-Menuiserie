@@ -99,7 +99,7 @@ export const HybridNavigation = ({
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.3 }}
             className={cn(
-              "fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-bleu-marine/95 to-bleu-marine/95 backdrop-blur-md border-b border-white/10",
+              "fixed top-0 left-0 right-0 z-50 bg-bleu-marine/95 backdrop-blur-md border-b border-white/10",
               className
             )}
             onMouseLeave={() => setActive(null)}
