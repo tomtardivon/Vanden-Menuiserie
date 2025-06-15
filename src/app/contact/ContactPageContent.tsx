@@ -38,11 +38,41 @@ export function ContactPageContent() {
     project: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          project: "",
+          message: ""
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -173,10 +203,23 @@ export function ContactPageContent() {
 
                 <button
                   type="submit"
-                  className="w-full bg-bleu-marine text-white py-4 rounded-lg hover:bg-brun-bois transition-colors font-semibold"
+                  disabled={isSubmitting}
+                  className="w-full bg-bleu-marine text-white py-4 rounded-lg hover:bg-brun-bois disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-semibold"
                 >
-                  Envoyer ma demande
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
                 </button>
+
+                {submitStatus === 'success' && (
+                  <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                    ✅ Votre demande a été envoyée avec succès ! Nous vous répondrons sous 24h.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                    ❌ Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.
+                  </div>
+                )}
 
                 <p className="text-sm text-bleu-marine/70 text-center">
                   * Champs obligatoires. Réponse garantie sous 24h.
