@@ -52,7 +52,7 @@ export function AboutPageContent() {
             </h1>
             <p className="text-xl text-bleu-marine/70 max-w-3xl mx-auto">
               Trois générations de passion pour le bois. 
-              Découvrez l'histoire de Vanden Menuiserie, artisan menuisier dans le Var depuis 1985.
+              Découvrez l'histoire de Vanden Menuiserie, artisan menuisier dans le Var.
             </p>
           </motion.div>
         </div>

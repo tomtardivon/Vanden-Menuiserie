@@ -47,7 +47,7 @@ export function Footer() {
               <span className="font-heading font-bold text-xl">Vanden Menuiserie</span>
             </div>
             <p className="text-white/70 mb-4 text-sm">
-              Artisan menuisier dans le Var depuis 1985.
+              Artisan menuisier dans le Var.
             </p>
             <div className="flex space-x-3">
               <a 

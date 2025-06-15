@@ -4,6 +4,8 @@ import { Star, MapPin, Calendar, ArrowRight, Eye, Award } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { featuredProjects } from "@/data/projects";
+import Link from "next/link";
 
 const ProjectContent = ({ 
   title, 
@@ -83,77 +85,57 @@ const ProjectContent = ({
 );
 
 export const ProjectsGallery = () => {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   
-  const projects = [
-    {
-      id: 1,
-      title: "Cuisine Contemporaine en Chêne Massif",
-      category: "Cuisine",
-      location: "Villa privée, Hyères", 
-      description: "Réalisation complète d'une cuisine haut de gamme avec îlot central et cave à vin intégrée.",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&auto=format&q=80",
-      materials: ["Chêne massif", "Quartz Calacatta", "Inox brossé"],
-      duration: "3 semaines",
-      className: "col-span-2 row-span-2",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Dressing Sur Mesure",
-      category: "Rangement",
-      location: "Appartement, Fréjus",
-      description: "Optimisation d'un espace réduit avec solutions innovantes.",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&auto=format&q=80",
-      materials: ["MDF laqué", "Miroirs", "LED"],
-      duration: "2 semaines",
-      className: "col-span-1 row-span-1"
-    },
-    {
-      id: 3,
-      title: "Escalier Suspendu Design",
-      category: "Escalier",
-      location: "Maison moderne, Toulon",
-      description: "Escalier suspendu avec structure acier et marches bois massif.",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&auto=format&q=80",
-      materials: ["Hêtre massif", "Acier", "Verre"],
-      duration: "4 semaines",
-      className: "col-span-1 row-span-2"
-    },
-    {
-      id: 4,
-      title: "Terrasse Bois Exotique",
-      category: "Extérieur",
-      location: "Villa vue mer, La Seyne",
-      description: "Terrasse IPÉ avec pergola bioclimatique et éclairage LED.",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&auto=format&q=80",
-      materials: ["Bois IPÉ", "Aluminium", "LED"],
-      duration: "2 semaines",
-      className: "col-span-1 row-span-1"
-    },
-    {
-      id: 5,
-      title: "Bibliothèque Sur Mesure",
-      category: "Mobilier",
-      location: "Maison de maître, Draguignan",
-      description: "Bibliothèque du sol au plafond avec échelle coulissante.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&auto=format&q=80",
-      materials: ["Noyer français", "Laiton", "Cuir"],
-      duration: "3 semaines",
-      className: "col-span-2 row-span-1"
-    },
-    {
-      id: 6,
-      title: "Cave à Vin Climatisée",
-      category: "Cave",
-      location: "Villa, Saint-Tropez",
-      description: "Cave 500 bouteilles avec climatisation et hygrométrie.",
-      image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&h=600&auto=format&q=80",
-      materials: ["Chêne vieilli", "Pierre", "Verre"],
-      duration: "4 semaines",
-      className: "col-span-1 row-span-1"
-    }
-  ];
+  const projects = featuredProjects.map((project, index) => {
+    const categoryLabels: Record<string, string> = {
+      'cuisine': 'Cuisine',
+      'dressing': 'Dressing', 
+      'placard': 'Placard',
+      'porte': 'Porte',
+      'meuble': 'Meuble',
+      'parquet': 'Parquet',
+      'autre': 'Agencement'
+    };
+
+    const locations = [
+      "Villa privée, Hyères",
+      "Appartement, Fréjus", 
+      "Maison moderne, Toulon",
+      "Villa vue mer, La Seyne",
+      "Maison de maître, Draguignan",
+      "Villa, Saint-Tropez"
+    ];
+
+    const materials = {
+      'cuisine': ["Chêne massif", "Quartz", "Inox brossé"],
+      'dressing': ["MDF laqué", "Miroirs", "LED"],
+      'porte': ["Bois massif", "Acier", "Verre"],
+      'meuble': ["Bois massif", "Pierre naturelle", "Verre"],
+      'parquet': ["Chêne massif", "Finition huilée", "Plinthes assorties"],
+      'placard': ["MDF", "Soft-close", "LED"],
+      'autre': ["Sur mesure", "Matériaux premium", "Finitions haut de gamme"]
+    };
+
+    const durations = {
+      'cuisine': "3 semaines",
+      'dressing': "2 semaines",
+      'porte': "1 semaine", 
+      'meuble': "3 semaines",
+      'parquet': "2 semaines",
+      'placard': "1 semaine",
+      'autre': "4 semaines"
+    };
+
+    return {
+      ...project,
+      category: categoryLabels[project.category] || project.category,
+      location: locations[index % locations.length],
+      image: project.images[0], 
+      materials: materials[project.category] || materials.autre,
+      duration: durations[project.category] || "2 semaines"
+    };
+  }).slice(0, 6);
 
   return (
     <section className="py-16 lg:py-24 bg-gradient-to-br from-gris-perle/50 via-white to-gris-perle/30">
@@ -341,16 +323,18 @@ export const ProjectsGallery = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
         >
-          <motion.button
-            className="group bg-bleu-marine hover:bg-brun-bois text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg shadow-lg transition-colors"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="flex items-center gap-2 lg:gap-3">
-              Voir tous nos projets
-              <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </motion.button>
+          <Link href="/tous-nos-projets">
+            <motion.button
+              className="group bg-bleu-marine hover:bg-brun-bois text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg shadow-lg transition-colors"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="flex items-center gap-2 lg:gap-3">
+                Voir tous nos projets
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

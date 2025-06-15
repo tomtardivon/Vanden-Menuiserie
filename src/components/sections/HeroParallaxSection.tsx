@@ -7,91 +7,91 @@ export const HeroParallaxSection = () => {
       title: "Cuisine moderne en chêne",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&auto=format&q=80",
+        "/projet/cuisine3/476817238_613627321614418_4615603404071204971_n.jpg",
     },
     {
       title: "Dressing sur mesure",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&h=400&auto=format&q=80",
+        "/projet/dressing2/480538904_622253694085114_680365040648911009_n.jpg",
     },
     {
       title: "Bibliothèque intégrée",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&h=400&auto=format&q=80",
+        "/projet/bibliothèque/476825774_612087235101760_8821014214908137278_n.jpg",
     },
     {
-      title: "Escalier en bois massif",
+      title: "Porte style verrière",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&auto=format&q=80",
+        "/projet/porte style verrière/476807615_612083191768831_8610442048184547110_n.jpg",
     },
     {
-      title: "Terrasse extérieure",
+      title: "Placard dressing",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&auto=format&q=80",
+        "/projet/placard dressing/474570361_600928522884298_4949368071245917949_n.jpg",
     },
     {
-      title: "Meuble TV personnalisé",
+      title: "Meuble vasque suspendu",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&auto=format&q=80",
+        "/projet/Montage et pose d'un meuble vasque suspendu et miroir/468422874_560750720235412_6331762406400830758_n.jpg",
     },
     {
-      title: "Bureau home office",
+      title: "Cuisine contemporaine",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&h=400&auto=format&q=80",
+        "/projet/cuisine4/475716544_606828588960958_2115149815697978324_n.jpg",
     },
     {
-      title: "Porte d'entrée sculptée",
+      title: "Porte d'entrée bois vitrée",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&h=400&auto=format&q=80",
+        "/projet/porte-bois-vitree/481976422_635117799465370_8392529013082885935_n.jpg",
     },
     {
-      title: "Parquet chevron",
+      title: "Parquet massif",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&auto=format&q=80",
+        "/projet/Pose de 65m2de parquet avec plinthes et barre de seuil/468433430_560749653568852_2496613854934014702_n.jpg",
     },
     {
-      title: "Salle de bain zen",
+      title: "Agencement tabac",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&auto=format&q=80",
+        "/projet/tabac/480855537_625536693756814_4142290280310242889_n.jpg",
     },
     {
-      title: "Pergola extérieure",
+      title: "Dressing avec éclairage LED",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?w=600&h=400&auto=format&q=80",
+        "/projet/dressing3/474533814_601468062830344_6621574874631471001_n.jpg",
     },
     {
-      title: "Aménagement combles",
+      title: "Meubles hauts cuisine",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&auto=format&q=80",
+        "/projet/meubles haut cuisine/480646070_622261720750978_4860030057873131362_n.jpg",
     },
     {
       title: "Cave à vin sur mesure",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&auto=format&q=80",
+        "/projet/cave a vins sur mesure/482071285_633511616292655_860457708729144469_n.jpg",
     },
     {
-      title: "Claustra décorative",
+      title: "Porte à galandage",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&h=400&auto=format&q=80",
+        "/projet/porte à galandage/485723147_643902435253573_7708038306749014808_n.jpg",
     },
     {
-      title: "Verrière atelier",
+      title: "Portes extérieures",
       link: "#",
       thumbnail:
-        "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&h=400&auto=format&q=80",
+        "/projet/portes extérieures/476776224_614347501542400_2400875005439647793_n.jpg",
     },
   ];
 

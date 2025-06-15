@@ -13,6 +13,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { CraftsmanshipSection } from "@/components/sections/CraftsmanshipSection";
 import { SustainabilitySection } from "@/components/sections/SustainabilitySection";
 import { MaskEffectSection } from "@/components/sections/MaskEffectSection";
+import ZoomParallax from "@/components/edil-ozi/zoom-parallax";
 
 export default function Home() {
   return (
@@ -39,6 +40,9 @@ export default function Home() {
 
       {/* Projets récents (gris) */}
       <ProjectsGallery />
+
+      {/* Zoom parallax des réalisations */}
+      <ZoomParallax />
 
       {/* Avant/Après transformations (blanc) */}
       <BeforeAfterSection />

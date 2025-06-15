@@ -4,6 +4,7 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, User } from "lucide-react";
+import { projects } from "@/data/projects";
 
 export function RealisationsPageContent() {
   const cards = data.map((card, index) => (
@@ -146,133 +147,78 @@ const ProjectContent = ({ project }: { project: any }) => {
   );
 };
 
-const data = [
-  {
-    category: "Cuisine",
-    title: "Cuisine moderne en chêne massif",
-    src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&auto=format&q=80",
+const data = projects.map((project, index) => {
+  const locations = [
+    "Villa à Hyères",
+    "Maison moderne à Toulon", 
+    "Appartement à Fréjus",
+    "Villa à La Seyne",
+    "Maison de maître à Draguignan",
+    "Villa à Saint-Tropez",
+    "Résidence privée à Cannes",
+    "Maison contemporaine à Nice"
+  ];
+
+  const durations = {
+    'cuisine': "3 semaines",
+    'dressing': "2 semaines",
+    'porte': "1 semaine", 
+    'meuble': "3 semaines",
+    'parquet': "2 semaines",
+    'placard': "1 semaine",
+    'autre': "4 semaines"
+  };
+
+  const materials = {
+    'cuisine': ["Chêne massif", "Quartz", "Inox brossé", "Verre trempé"],
+    'dressing': ["MDF laqué", "Miroirs", "LED intégrées", "Aluminium"],
+    'porte': ["Bois massif", "Acier thermolaqué", "Verre trempé", "Quincaillerie premium"],
+    'meuble': ["Bois massif", "Pierre naturelle", "Verre", "Acier"],
+    'parquet': ["Chêne massif", "Plinthes assorties", "Barres de seuil", "Sous-couche isolante"],
+    'placard': ["MDF", "Soft-close", "LED", "Aluminium"],
+    'autre': ["Matériaux premium", "Finitions haut de gamme", "Quincaillerie sur mesure", "LED"]
+  };
+
+  const testimonials = [
+    { text: "Mattias a transformé notre espace en un véritable lieu de vie. La qualité du travail est exceptionnelle, chaque détail a été pensé avec soin.", author: "Marie et Pierre D." },
+    { text: "Cette réalisation a complètement transformé notre intérieur. Elle apporte style et fonctionnalité !", author: "Sophie M." },
+    { text: "Un travail parfaitement pensé qui a transformé notre maison. Chaque centimètre est optimisé.", author: "Laurent B." },
+    { text: "Un travail soigné et rapide. Le résultat donne une tout autre dimension à notre maison !", author: "Famille Rossi" },
+    { text: "Une réalisation digne d'un château ! Le travail du bois est remarquable.", author: "Jean-Paul V." },
+    { text: "Une création exceptionnelle qui met en valeur notre espace. Un vrai bijou !", author: "Philippe R." },
+    { text: "Un savoir-faire exceptionnel et un résultat à la hauteur de nos attentes.", author: "Catherine L." },
+    { text: "Nous sommes ravis du résultat, c'est exactement ce que nous imaginions.", author: "Marc et Anne T." }
+  ];
+
+  const categoryLabels: Record<string, string> = {
+    'cuisine': 'Cuisine',
+    'dressing': 'Dressing', 
+    'placard': 'Placard',
+    'porte': 'Porte',
+    'meuble': 'Meuble',
+    'parquet': 'Parquet',
+    'autre': 'Agencement'
+  };
+
+  return {
+    category: categoryLabels[project.category] || project.category,
+    title: project.title,
+    src: project.images[0],
     content: <ProjectContent project={{
-      title: "Cuisine moderne en chêne massif",
-      images: [
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&auto=format&q=80",
-        "https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=800&h=600&auto=format&q=80",
-        "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&h=600&auto=format&q=80",
-        "https://images.unsplash.com/photo-1565727729156-8c9bc792065a?w=800&h=600&auto=format&q=80"
-      ],
-      duration: "3 semaines",
-      location: "Villa à Hyères",
-      type: "Rénovation complète",
-      description: "Réalisation complète d'une cuisine haut de gamme avec îlot central et cave à vin intégrée. Design contemporain alliant fonctionnalité et esthétique. L'îlot central multifonction intègre une plaque de cuisson, un espace repas et de nombreux rangements.",
-      materials: ["Chêne massif", "Quartz Calacatta", "Inox brossé", "Verre trempé"],
-      testimonial: {
-        text: "Mattias a transformé notre cuisine en un véritable espace de vie. La qualité du travail est exceptionnelle, chaque détail a été pensé avec soin.",
-        author: "Marie et Pierre D."
-      }
-    }} />,
-  },
-  {
-    category: "Escalier",
-    title: "Escalier suspendu design",
-    src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&auto=format&q=80",
-    content: <ProjectContent project={{
-      title: "Escalier suspendu design",
-      images: [
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&auto=format&q=80",
-        "https://images.unsplash.com/photo-1519947486511-46149fa0a254?w=800&h=600&auto=format&q=80"
-      ],
-      duration: "4 semaines",
-      location: "Maison moderne à Toulon",
-      type: "Construction neuve",
-      description: "Création d'un escalier suspendu avec structure en acier et marches en bois massif. Le garde-corps en verre apporte légèreté et modernité à l'ensemble.",
-      materials: ["Hêtre massif", "Acier thermolaqué", "Verre feuilleté"],
-      testimonial: {
-        text: "Un escalier qui est devenu la pièce maîtresse de notre intérieur. Un vrai travail d'artiste !",
-        author: "Sophie M."
-      }
-    }} />,
-  },
-  {
-    category: "Dressing",
-    title: "Dressing luxe avec éclairage LED",
-    src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&auto=format&q=80",
-    content: <ProjectContent project={{
-      title: "Dressing luxe avec éclairage LED",
-      images: [
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&auto=format&q=80",
-        "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800&h=600&auto=format&q=80"
-      ],
-      duration: "2 semaines",
-      location: "Appartement à Fréjus",
-      type: "Aménagement",
-      description: "Dressing sur mesure avec solutions de rangement optimisées, tiroirs soft-close et éclairage LED intégré avec détecteur de mouvement.",
-      materials: ["MDF laqué", "Miroirs", "LED intégrées", "Aluminium"],
-      testimonial: {
-        text: "Un dressing parfaitement pensé qui a transformé notre chambre. Chaque centimètre est optimisé.",
-        author: "Laurent B."
-      }
-    }} />,
-  },
-  {
-    category: "Terrasse",
-    title: "Terrasse en bois exotique avec pergola",
-    src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&auto=format&q=80",
-    content: <ProjectContent project={{
-      title: "Terrasse en bois exotique avec pergola",
-      images: [
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&auto=format&q=80",
-        "https://images.unsplash.com/photo-1506126279646-a697353d3166?w=800&h=600&auto=format&q=80"
-      ],
-      duration: "2 semaines",
-      location: "Villa avec vue mer à La Seyne",
-      type: "Aménagement extérieur",
-      description: "Création d'une terrasse en bois exotique IPÉ avec pergola bioclimatique. Éclairage LED intégré et système de brumisation pour les chaudes soirées d'été.",
-      materials: ["Bois IPÉ", "Aluminium", "LED étanches", "Visserie inox"],
-      testimonial: {
-        text: "Notre terrasse est devenue notre pièce préférée. Parfaite pour profiter de la vue mer !",
-        author: "Famille Rossi"
-      }
-    }} />,
-  },
-  {
-    category: "Bibliothèque",
-    title: "Bibliothèque murale sur mesure",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&auto=format&q=80",
-    content: <ProjectContent project={{
-      title: "Bibliothèque murale sur mesure",
-      images: [
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&auto=format&q=80",
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&auto=format&q=80"
-      ],
-      duration: "3 semaines",
-      location: "Maison de maître à Draguignan",
-      type: "Aménagement intérieur",
-      description: "Bibliothèque sur mesure du sol au plafond avec échelle coulissante. Intégration d'un bureau et d'espaces de rangement cachés.",
-      materials: ["Noyer français", "Laiton", "Cuir", "Verre"],
-      testimonial: {
-        text: "Une bibliothèque digne d'un château ! Le travail du bois est remarquable.",
-        author: "Jean-Paul V."
-      }
-    }} />,
-  },
-  {
-    category: "Cave à vin",
-    title: "Cave à vin climatisée",
-    src: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&h=600&auto=format&q=80",
-    content: <ProjectContent project={{
-      title: "Cave à vin climatisée",
-      images: [
-        "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&h=600&auto=format&q=80",
-        "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&h=600&auto=format&q=80"
-      ],
-      duration: "4 semaines",
-      location: "Villa à Saint-Tropez",
-      type: "Aménagement spécialisé",
-      description: "Cave à vin sur mesure avec système de climatisation, hygrométrie contrôlée et casiers modulables pour 500 bouteilles.",
-      materials: ["Chêne vieilli", "Pierre naturelle", "Verre", "Acier"],
-      testimonial: {
-        text: "Une cave exceptionnelle qui met en valeur notre collection. Un vrai bijou !",
-        author: "Philippe R."
-      }
-    }} />,
-  }
-];
+      title: project.title,
+      images: project.images,
+      duration: durations[project.category] || "2 semaines",
+      location: locations[index % locations.length],
+      type: project.category === 'cuisine' ? 'Rénovation complète' : 
+            project.category === 'dressing' ? 'Aménagement' :
+            project.category === 'porte' ? 'Installation sur mesure' :
+            project.category === 'meuble' ? 'Création sur mesure' :
+            project.category === 'parquet' ? 'Pose de parquet' :
+            project.category === 'placard' ? 'Aménagement' :
+            'Aménagement spécialisé',
+      description: project.description,
+      materials: materials[project.category] || materials.autre,
+      testimonial: testimonials[index % testimonials.length]
+    }} />
+  };
+});
