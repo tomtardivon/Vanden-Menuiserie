@@ -1,12 +1,5 @@
 {
-  "buildCommand": "next build",
-  "outputDirectory": ".next",
   "framework": "nextjs",
-  "functions": {
-    "src/pages/api/**/*.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "regions": ["fra1"],
   "headers": [
     {
