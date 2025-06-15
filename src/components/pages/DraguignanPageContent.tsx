@@ -1,11 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import { ServicesSection } from "@/components/sections/ServicesSection";
 import { projects } from "@/data/projects";
+import { TestimonialsSection } from "../sections/TestimonialsSection";
+import { FAQSection } from "../sections/FAQSection";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 export function DraguignanPageContent() {
   return (
-    <main className="relative pt-18">
+    <main className="relative pt-20">
         {/* Hero Section Draguignan */}
         <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
           {/* Background with city image */}
@@ -157,7 +160,13 @@ export function DraguignanPageContent() {
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {projects.filter(p => p.featured).slice(0, 3).map((project, index) => (
+              {[
+                projects.find(p => p.id === 'bibliotheque-sur-mesure'),
+                projects.find(p => p.id === 'placard-sur-mesure'),
+                projects.find(p => p.id === 'porte-bois-vitree')
+              ].filter(Boolean).map((project, index) => {
+                if (!project) return null;
+                return (
                 <motion.a
                   key={project.title}
                   href={`/projet/${project.id}`}
@@ -189,7 +198,8 @@ export function DraguignanPageContent() {
                     {project.description}
                   </p>
                 </motion.a>
-              ))}
+                )
+              })}
             </div>
 
             <motion.div
@@ -212,7 +222,91 @@ export function DraguignanPageContent() {
           </div>
         </section>
 
-        <ServicesSection />
+      {/* Témoignages clients */}
+      <TestimonialsSection />
+
+      {/* Autres villes Section */}
+      <section className="py-24 bg-gris-perle">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-bleu-marine mb-6">
+              Nos Services dans le Var
+            </h2>
+            <p className="text-xl text-bleu-marine/70 max-w-3xl mx-auto">
+              Découvrez nos réalisations dans d'autres villes du département
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                city: "Toulon",
+                description: "Cuisines sur mesure et escaliers nobles",
+                image: "/villes/toulon/toulon.jpg",
+                href: "/menuisier-toulon"
+              },
+              {
+                city: "La Seyne-sur-Mer",
+                description: "Aménagements nautiques et bord de mer",
+                image: "/villes/la-seyne-sur-mer/la-seyne-sur-mer.jpg",
+                href: "/menuisier-la-seyne-sur-mer"
+              },
+              {
+                city: "Fréjus",
+                description: "Villas modernes et espaces contemporains",
+                image: "/villes/frejus/frejus.jpg",
+                href: "/menuisier-frejus"
+              }
+            ].map((ville, index) => (
+              <motion.a
+                key={ville.city}
+                href={ville.href}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="group cursor-pointer block"
+              >
+                <div className="relative h-[300px] rounded-2xl overflow-hidden mb-6">
+                  <Image
+                    src={ville.image}
+                    alt={`${ville.city} - Vue de la ville`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 transition-all duration-300" />
+
+                  <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
+                    <div className="flex justify-end">
+                      <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                        <ArrowUpRight className="w-5 h-5 text-white" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-brun-bois transition-colors">
+                        {ville.city}
+                      </h3>
+                      <p className="text-white/90 text-sm">
+                        {ville.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Questions fréquentes */}
+      <FAQSection />
       
       {/* Schema LocalBusiness pour Draguignan */}
       <script

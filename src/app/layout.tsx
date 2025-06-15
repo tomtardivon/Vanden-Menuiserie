@@ -113,7 +113,7 @@ export default function RootLayout({
                 "reviewCount": "50"
               },
               "sameAs": [
-                "https://www.facebook.com/vandenmenuiserie",
+                "https://www.facebook.com/profile.php?id=100089014670678",
                 "https://www.instagram.com/vandenmenuiserie"
               ]
             })

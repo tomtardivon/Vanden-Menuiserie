@@ -334,7 +334,7 @@ export default function CharteGraphiquePage() {
                   { label: "Body", size: "text-base", example: "Paragraph" },
                   { label: "Small", size: "text-sm", example: "Caption" },
                   { label: "Tiny", size: "text-xs", example: "Meta" }
-                ].map((type, index) => (
+                ].map((type) => (
                   <div key={type.label} className="text-center">
                     <p className="text-xs text-bleu-marine/60 mb-2 font-bold uppercase tracking-wide">{type.label}</p>
                     <div className={`font-heading ${type.size} text-bleu-marine font-bold mb-1`}>
@@ -372,10 +372,26 @@ export default function CharteGraphiquePage() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { component: DotPattern, name: "Dots", props: { size: 1.5, spacing: 25, color: "#1E2B39", fade: true } },
-                { component: CrossPattern, name: "Cross", props: { size: 1, spacing: 30, color: "#1E2B39", fade: true } },
-                { component: GridPattern, name: "Grid", props: { size: 25, strokeWidth: 1, color: "#1E2B39", fade: true } },
-                { component: GridBeam, name: "Beam", props: { className: "opacity-30" } }
+                { 
+                  name: "Dots", 
+                  props: { size: 1.5, spacing: 25, color: "#1E2B39", fade: true },
+                  render: (props: any) => <DotPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                { 
+                  name: "Cross", 
+                  props: { size: 1, spacing: 30, color: "#1E2B39", fade: true },
+                  render: (props: any) => <CrossPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                { 
+                  name: "Grid", 
+                  props: { size: 25, strokeWidth: 1, color: "#1E2B39", fade: true },
+                  render: (props: any) => <GridPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                { 
+                  name: "Beam", 
+                  props: { className: "opacity-30" },
+                  render: (props: any) => <GridBeam {...props}><div /></GridBeam> // eslint-disable-line @typescript-eslint/no-explicit-any
+                }
               ].map((pattern, index) => (
                 <motion.div
                   key={pattern.name}
@@ -385,7 +401,7 @@ export default function CharteGraphiquePage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative bg-white rounded-xl border min-h-[200px] overflow-hidden group hover:shadow-lg transition-all duration-300"
                 >
-                  <pattern.component {...pattern.props} />
+                  {pattern.render(pattern.props)}
                   <div className="relative z-10 p-6 flex flex-col justify-between h-full">
                     <div>
                       <h4 className="font-heading font-bold text-bleu-marine mb-2">
@@ -414,10 +430,26 @@ export default function CharteGraphiquePage() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { component: DotPattern, name: "Dots", props: { size: 3, spacing: 20, color: "#FFFFFF", fade: false } },
-                { component: CrossPattern, name: "Cross", props: { size: 3, spacing: 20, color: "#FFD700", fade: false } },
-                { component: GridPattern, name: "Grid", props: { size: 15, strokeWidth: 2, color: "#FFFFFF", fade: false } },
-                { component: DotPattern, name: "Dots Cyan", props: { size: 2, spacing: 25, color: "#00FFFF", fade: false } }
+                { 
+                  name: "Dots", 
+                  props: { size: 3, spacing: 20, color: "#FFFFFF", fade: false },
+                  render: (props: any) => <DotPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                { 
+                  name: "Cross", 
+                  props: { size: 3, spacing: 20, color: "#FFD700", fade: false },
+                  render: (props: any) => <CrossPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                { 
+                  name: "Grid", 
+                  props: { size: 15, strokeWidth: 2, color: "#FFFFFF", fade: false },
+                  render: (props: any) => <GridPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                },
+                { 
+                  name: "Dots Cyan", 
+                  props: { size: 2, spacing: 25, color: "#00FFFF", fade: false },
+                  render: (props: any) => <DotPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
+                }
               ].map((pattern, index) => (
                 <motion.div
                   key={`dark-${pattern.name}`}
@@ -428,7 +460,7 @@ export default function CharteGraphiquePage() {
                   className="relative rounded-xl min-h-[200px] overflow-hidden group hover:shadow-lg transition-all duration-300"
                   style={{ backgroundColor: '#1E2B39' }}
                 >
-                  <pattern.component {...pattern.props} />
+                  {pattern.render(pattern.props)}
                   <div className="relative z-10 p-6 flex flex-col justify-between h-full">
                     <div>
                       <h4 className="font-heading font-bold text-white mb-2">

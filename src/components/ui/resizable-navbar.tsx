@@ -130,10 +130,10 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
             );
           }
           // Handle nested elements (like divs containing NavbarLogo or NavbarButton)
-          if (child.props && child.props.children) {
-            return React.cloneElement(child, {
+          if (child.props && (child.props as any).children) {
+            return React.cloneElement(child as any, {
               children: React.Children.map(
-                child.props.children,
+                (child.props as any).children,
                 (nestedChild) => {
                   if (
                     React.isValidElement(nestedChild) &&
@@ -146,10 +146,10 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
                     );
                   }
                   // Handle double nested elements (div > div > NavbarButton)
-                  if (React.isValidElement(nestedChild) && nestedChild.props && nestedChild.props.children) {
-                    return React.cloneElement(nestedChild, {
+                  if (React.isValidElement(nestedChild) && nestedChild.props && (nestedChild.props as any).children) {
+                    return React.cloneElement(nestedChild as any, {
                       children: React.Children.map(
-                        nestedChild.props.children,
+                        (nestedChild.props as any).children,
                         (doubleNestedChild) => {
                           if (
                             React.isValidElement(doubleNestedChild) &&

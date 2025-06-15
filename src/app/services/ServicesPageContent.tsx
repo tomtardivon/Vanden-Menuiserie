@@ -11,7 +11,6 @@ import {
   Star,
   Quote,
   Calendar,
-  MapPin,
   Award,
   X,
   ZoomIn

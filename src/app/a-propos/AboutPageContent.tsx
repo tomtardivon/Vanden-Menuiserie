@@ -1,8 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Star, Award, ArrowRight, Phone, Heart, Shield, Users, Wrench, MapPin, Calendar, Quote } from "lucide-react";
-import Link from "next/link";
+import { Star, ArrowRight, Phone, Heart, Shield, Users, Wrench, MapPin, Quote } from "lucide-react";
 import { Spotlight } from "@/components/ui/aceternity/spotlight";
 import { TextGenerateEffect } from "@/components/ui/aceternity/text-generate-effect";
 

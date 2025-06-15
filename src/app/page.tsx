@@ -2,12 +2,9 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ProjectsGallery } from "@/components/sections/ProjectsGallery";
 import { BeforeAfterSection } from "@/components/sections/BeforeAfterSection";
-import { ThreeDGallerySection } from "@/components/sections/ThreeDGallerySection";
 import { HeroParallaxSection } from "@/components/sections/HeroParallaxSection";
 import { VelocityScrollSection } from "@/components/sections/VelocityScrollSection";
-import { TextRevealSection } from "@/components/sections/TextRevealSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { InfiniteTestimonialsSection } from "@/components/sections/InfiniteTestimonialsSection";
 
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";

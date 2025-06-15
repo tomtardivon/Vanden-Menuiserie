@@ -49,7 +49,7 @@ export const CTASection = () => {
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-beige-moderne hover:text-bleu-marine transition-all inline-flex items-center gap-3"
             >
               <Phone className="w-5 h-5" />
-              04 94 12 34 56
+              07 62 14 43 40
             </motion.a>
           </div>
 

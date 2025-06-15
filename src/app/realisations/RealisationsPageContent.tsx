@@ -275,7 +275,8 @@ export function RealisationsPageContent() {
                 projects: ["Projets familiaux", "Rangements optimisés", "Espaces enfants"],
                 highlight: "Solutions famille",
                 color: "from-bleu-marine/60 to-brun-bois/40",
-                image: "/villes/la-seyne/Port_de_La_Seyne-sur-Mer.JPG"
+                href: "/menuisier-la-seyne-sur-mer",
+                image: "/villes/la-seyne-sur-mer/la-seyne-sur-mer.jpg"
               },
               {
                 city: "Draguignan",
@@ -283,6 +284,7 @@ export function RealisationsPageContent() {
                 projects: ["Maisons de maître", "Escaliers nobles", "Restaurations"],
                 highlight: "Savoir-faire traditionnel",
                 color: "from-brun-bois/80 to-bleu-marine/60",
+                href: "/menuisier-draguignan",
                 image: "/villes/draguignan/draguignan.jpg"
               },
               {
@@ -290,7 +292,7 @@ export function RealisationsPageContent() {
                 count: "30+",
                 projects: ["Six-Fours", "Sanary", "Bandol", "Saint-Cyr"],
                 highlight: "Intervention dans tout le Var",
-                color: "from-bleu-marine/70 to-brun-bois/50",
+                color: "from-bleu-marine/70 to-brun-bois/50",   
                 image: "/villes/toulon/toulon2.jpg"
               }
             ].map((zone, index) => {
@@ -315,10 +317,10 @@ export function RealisationsPageContent() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    
+
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 transition-all duration-300" />
-                    
+
                     {/* Content overlay */}
                     <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
                       {/* Top section - Badge and count */}
@@ -332,14 +334,14 @@ export function RealisationsPageContent() {
                           </div>
                         )}
                       </div>
-                      
+
                       {/* Bottom section - City info */}
                       <div className="space-y-4">
                         <div>
                           <h3 className="text-2xl font-bold mb-2 group-hover:text-brun-bois transition-colors">{zone.city}</h3>
                           <p className="text-white/90 text-sm font-medium mb-3">{zone.highlight}</p>
                         </div>
-                        
+
                         {/* Projects list */}
                         <div className="space-y-2">
                           {zone.projects.slice(0, 3).map((project, i) => (
@@ -349,7 +351,7 @@ export function RealisationsPageContent() {
                             </div>
                           ))}
                         </div>
-                        
+
                         {/* Clickable indicator */}
                         {zone.href && (
                           <div className="pt-3 border-t border-white/20">
@@ -500,7 +502,7 @@ export function RealisationsPageContent() {
                   className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all"
                 >
                   <Calendar className="w-5 h-5" />
-                  04 94 12 34 56
+                  07 62 14 43 40
                 </motion.a>
               </div>
 

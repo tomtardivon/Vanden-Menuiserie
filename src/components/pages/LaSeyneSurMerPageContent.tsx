@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { ServicesSection } from "@/components/sections/ServicesSection";
 import { projects } from "@/data/projects";
+import { TestimonialsSection } from "../sections/TestimonialsSection";
+import { FAQSection } from "../sections/FAQSection";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
@@ -159,7 +160,12 @@ export function LaSeyneSurMerPageContent() {
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {projects.filter(p => p.featured).slice(0, 3).map((project, index) => (
+              {[
+                projects.find(p => p.id === 'agencement-tabac-monaco'),
+                projects.find(p => p.id === 'placard-dressing-integre'),
+                projects.find(p => p.id === 'meuble-vasque-salle-bain')
+              ].filter(Boolean).map((project, index) => {
+                if (!project) return null;
                 <motion.a
                   key={project.title}
                   href={`/projet/${project.id}`}
@@ -191,7 +197,7 @@ export function LaSeyneSurMerPageContent() {
                     {project.description}
                   </p>
                 </motion.a>
-              ))}
+              })}
             </div>
 
             <motion.div
@@ -214,7 +220,8 @@ export function LaSeyneSurMerPageContent() {
           </div>
         </section>
 
-        <ServicesSection />
+      {/* Témoignages clients */}
+      <TestimonialsSection />
 
         {/* Autres villes Section */}
         <section className="py-24 bg-gris-perle">
@@ -295,7 +302,9 @@ export function LaSeyneSurMerPageContent() {
             </div>
           </div>
         </section>
-      
+      {/* Questions fréquentes */}
+      <FAQSection />
+
       {/* Schema LocalBusiness pour La Seyne-sur-Mer */}
       <script
         type="application/ld+json"

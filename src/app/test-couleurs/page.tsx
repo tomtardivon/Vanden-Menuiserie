@@ -227,7 +227,9 @@ export default function TestCouleursPage() {
             </div>
             
             <div className="relative bg-white rounded-lg min-h-[200px] border overflow-hidden">
-              <GridBeam className="opacity-30" />
+              <GridBeam className="opacity-30">
+                <div />
+              </GridBeam>
               <div className="relative z-10 p-6">
                 <h4 className="font-semibold mb-2 text-bleu-marine">Grid Beam</h4>
                 <p className="text-sm text-bleu-marine/70">Faisceaux animés</p>

@@ -12,7 +12,7 @@ const testimonials = [
     rating: 5,
     text: "Mattias a réalisé notre cuisine sur mesure avec un professionnalisme remarquable. Le résultat dépasse nos attentes ! Chaque détail a été pensé avec soin.",
     project: "Cuisine sur mesure",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b142?auto=format&q=80&w=150&h=150"
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&q=80&w=150&h=150"
   },
   {
     id: 2,

@@ -9,7 +9,11 @@
       "Bash(npm run dev:*)",
       "Bash(ls:*)",
       "Bash(npx tsc:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run start:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }

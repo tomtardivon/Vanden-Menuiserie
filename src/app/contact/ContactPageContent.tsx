@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
 
 const contactInfo = [
   {
