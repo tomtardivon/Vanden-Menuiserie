@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export function RealProjectsSection() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-blanc-casse">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

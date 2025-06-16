@@ -22,6 +22,7 @@ import { TrustSection } from "@/components/sections/TrustSection";
 import { ExcellenceSection } from "@/components/sections/ExcellenceSection";
 import { TransformationsSection } from "@/components/sections/TransformationsSection";
 import { VillesSection } from "@/components/sections/VillesSection";
+import { PremiumCTASection } from "@/components/sections/PremiumCTASection";
 
 export default function Home() {
   return (
@@ -90,8 +91,10 @@ export default function Home() {
       {/* Questions fréquentes */}
       <FAQSection />
 
-      {/* Appel à l'action final */}
       <CTASection />
+
+      {/* Appel à l'action final - Design bleu marine */}
+      <PremiumCTASection />
     </main>
   );
 }

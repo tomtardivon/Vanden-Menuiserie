@@ -401,24 +401,6 @@ export default function CharteGraphiquePage() {
                   render: (props: any) => <PlusPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
                 },
                 {
-                  name: "Hexagonal",
-                  description: "Géométrie hexagonale",
-                  props: { size: 40, color: "#1E2B39", variant: "outline", fade: true, opacity: 0.15 },
-                  render: (props: any) => <HexagonalPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
-                },
-                {
-                  name: "Wave",
-                  description: "Ondulations organiques",
-                  props: { amplitude: 20, frequency: 80, color: "#1E2B39", variant: "sine", fade: true, opacity: 0.2 },
-                  render: (props: any) => <WavePattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
-                },
-                {
-                  name: "Wood",
-                  description: "Texture bois naturel",
-                  props: { scale: 60, color: "#A67C52", variant: "wood", fade: true, opacity: 0.12 },
-                  render: (props: any) => <OrganicPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
-                },
-                {
                   name: "Beam",
                   description: "Faisceaux animés",
                   props: { color: "#A67C52", variant: "vertical", speed: 3, className: "opacity-40" },
@@ -485,24 +467,6 @@ export default function CharteGraphiquePage() {
                   description: "Plus cuivré",
                   props: { plusSize: 50, plusColor: "#B87333", fade: false, opacity: 0.4 },
                   render: (props: any) => <PlusPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
-                },
-                {
-                  name: "Hex Honey",
-                  description: "Hexagones miel",
-                  props: { size: 35, color: "#FFD700", variant: "honeycomb", fade: false, opacity: 0.3 },
-                  render: (props: any) => <HexagonalPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
-                },
-                {
-                  name: "Wave Cream",
-                  description: "Vagues crème",
-                  props: { amplitude: 15, frequency: 70, color: "#F5F5DC", variant: "organic", fade: false, opacity: 0.25 },
-                  render: (props: any) => <WavePattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
-                },
-                {
-                  name: "Marble",
-                  description: "Marbre naturel",
-                  props: { scale: 50, color: "#E8E8E8", variant: "marble", fade: false, opacity: 0.2 },
-                  render: (props: any) => <OrganicPattern {...props} /> // eslint-disable-line @typescript-eslint/no-explicit-any
                 },
                 {
                   name: "Beam Cross",
