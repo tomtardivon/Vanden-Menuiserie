@@ -4,7 +4,7 @@ import { ProjectsGallery } from "@/components/sections/ProjectsGallery";
 
 export const metadata: Metadata = {
   title: "Menuisier à La Seyne-sur-Mer (83500) | Vanden Menuiserie - Devis Gratuit",
-  description: "Vanden Menuiserie, votre menuisier professionnel à La Seyne-sur-Mer. Projets familiaux, rangements optimisés, espaces enfants. 2 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
+  description: "Vanden Menuiserie, votre menuisier professionnel à La Seyne-sur-Mer. Projets familiaux, rangements optimisés, espaces enfants. 3 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
   keywords: [
     "menuisier la seyne sur mer",
     "cuisine familiale la seyne",
@@ -45,7 +45,7 @@ export default function MenuisierLaSeyne() {
                 </h1>
                 
                 <p className="text-xl text-bleu-marine/80 mb-8 leading-relaxed">
-                  Vanden Menuiserie, votre artisan menuisier de confiance à La Seyne-sur-Mer depuis 2 ans. 
+                  Vanden Menuiserie, votre artisan menuisier de confiance à La Seyne-sur-Mer depuis 2022. 
                   Spécialisé dans les solutions familles, rangements optimisés et espaces enfants.
                 </p>
                 

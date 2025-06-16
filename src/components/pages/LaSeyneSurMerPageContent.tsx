@@ -60,7 +60,7 @@ export function LaSeyneSurMerPageContent() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl"
               >
-                <span className="text-brun-bois font-semibold">38 ans d'expertise</span> dans cette cité maritime. 
+                <span className="text-brun-bois font-semibold">Depuis 2022</span> dans cette cité maritime. 
                 Créateur de mobilier sur mesure, agencements et projets d'exception.
               </motion.p>
               

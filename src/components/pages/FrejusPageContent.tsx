@@ -60,7 +60,7 @@ export function FrejusPageContent() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl"
             >
-              <span className="text-brun-bois font-semibold">38 ans d'expertise</span> au cœur de Fréjus.
+              <span className="text-brun-bois font-semibold">Depuis 2022</span> au cœur de Fréjus.
               Concepteur d'espaces sur mesure, aménagements extérieurs et créations d'exception.
             </motion.p>
 

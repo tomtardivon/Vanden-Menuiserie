@@ -3,7 +3,7 @@ import { LaSeyneSurMerPageContent } from '@/components/pages/LaSeyneSurMerPageCo
 
 export const metadata: Metadata = {
   title: "Menuisier à La Seyne-sur-Mer (83500) | Vanden Menuiserie - Devis Gratuit",
-  description: "Vanden Menuiserie, votre menuisier professionnel à La Seyne-sur-Mer. Mobilier sur mesure, agencements, projets d'exception. 2 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
+  description: "Vanden Menuiserie, votre menuisier professionnel à La Seyne-sur-Mer. Mobilier sur mesure, agencements, projets d'exception. 3 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
   keywords: [
     "menuisier la seyne sur mer",
     "cuisine sur mesure la seyne",

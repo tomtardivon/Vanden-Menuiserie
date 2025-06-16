@@ -3,7 +3,7 @@ import { HyeresPageContent } from '@/components/pages/HyeresPageContent';
 
 export const metadata: Metadata = {
   title: "Menuisier à Hyères (83400) | Vanden Menuiserie - Devis Gratuit",
-  description: "Vanden Menuiserie, votre menuisier professionnel à Hyères. Cuisines sur mesure, terrasses bois, meubles d'exception. 2 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
+  description: "Vanden Menuiserie, votre menuisier professionnel à Hyères. Cuisines sur mesure, terrasses bois, meubles d'exception. 3 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
   keywords: [
     "menuisier hyères",
     "cuisine sur mesure hyères",

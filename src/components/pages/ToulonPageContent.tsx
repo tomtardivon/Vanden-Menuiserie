@@ -61,7 +61,7 @@ export function ToulonPageContent() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl"
             >
-              <span className="text-brun-bois font-semibold">38 ans d'expertise</span> au service des Toulonnais.
+              <span className="text-brun-bois font-semibold">Depuis 2022</span> au service des Toulonnais.
               Créateur de cuisines sur mesure, escaliers nobles et menuiseries d'exception.
             </motion.p>
 

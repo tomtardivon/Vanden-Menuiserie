@@ -6,8 +6,8 @@ import { Award, Clock, Users, Wrench, Star, CheckCircle } from "lucide-react";
 const features = [
   {
     icon: Award,
-    title: "45 ans d'expertise",
-    description: "Un savoir-faire artisanal transmis de génération en génération depuis 1978",
+    title: "3 ans d'expertise",
+    description: "Un savoir-faire artisanal développé avec passion depuis 2022",
     stats: "150+ projets réalisés"
   },
   {

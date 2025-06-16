@@ -3,7 +3,7 @@ import { DraguignanPageContent } from '@/components/pages/DraguignanPageContent'
 
 export const metadata: Metadata = {
   title: "Menuisier à Draguignan (83300) | Vanden Menuiserie - Devis Gratuit",
-  description: "Vanden Menuiserie, votre menuisier professionnel à Draguignan. Restaurations d'époque, escaliers nobles, créations patrimoniales. 2 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
+  description: "Vanden Menuiserie, votre menuisier professionnel à Draguignan. Restaurations d'époque, escaliers nobles, créations patrimoniales. 3 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
   keywords: [
     "menuisier draguignan",
     "escalier draguignan",

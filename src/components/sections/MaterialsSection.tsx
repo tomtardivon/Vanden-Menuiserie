@@ -249,7 +249,7 @@ export const MaterialsSection = () => {
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-md border border-gris-perle/30">
               <Hammer className="w-5 h-5 text-brun-bois" />
               <span className="text-bleu-marine font-medium">
-                45 ans d'expertise dans la sélection des meilleurs bois
+                Expertise depuis 2022 dans la sélection des meilleurs bois
               </span>
             </div>
           </motion.div>

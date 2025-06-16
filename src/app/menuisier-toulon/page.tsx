@@ -3,7 +3,7 @@ import { ToulonPageContent } from '@/components/pages/ToulonPageContent';
 
 export const metadata: Metadata = {
   title: "Menuisier à Toulon (83000) | Vanden Menuiserie - Devis Gratuit",
-  description: "Vanden Menuiserie, votre menuisier professionnel à Toulon. Cuisines sur mesure, escaliers, fenêtres. 2 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
+  description: "Vanden Menuiserie, votre menuisier professionnel à Toulon. Cuisines sur mesure, escaliers, fenêtres. 3 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
   keywords: [
     "menuisier toulon",
     "cuisine sur mesure toulon",

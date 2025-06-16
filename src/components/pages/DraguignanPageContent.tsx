@@ -60,7 +60,7 @@ export function DraguignanPageContent() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl"
               >
-                <span className="text-brun-bois font-semibold">38 ans d'expertise</span> dans la capitale du Var. 
+                <span className="text-brun-bois font-semibold">Depuis 2022</span> dans la capitale du Var. 
                 Maître artisan spécialisé en restaurations d'époque, escaliers nobles et créations patrimoniales.
               </motion.p>
               

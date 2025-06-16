@@ -3,7 +3,7 @@ import { FrejusPageContent } from '@/components/pages/FrejusPageContent';
 
 export const metadata: Metadata = {
   title: "Menuisier à Fréjus (83600) | Vanden Menuiserie - Devis Gratuit",
-  description: "Vanden Menuiserie, votre menuisier professionnel à Fréjus. Maisons contemporaines, bibliothèques, agencements modernes. 2 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
+  description: "Vanden Menuiserie, votre menuisier professionnel à Fréjus. Maisons contemporaines, bibliothèques, agencements modernes. 3 ans d'expérience dans le Var. Devis gratuit ☎ 07 62 14 43 40",
   keywords: [
     "menuisier fréjus",
     "cuisine sur mesure fréjus",

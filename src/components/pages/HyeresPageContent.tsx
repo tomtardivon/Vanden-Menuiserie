@@ -60,7 +60,7 @@ export function HyeresPageContent() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl"
             >
-              <span className="text-brun-bois font-semibold">38 ans d'expertise</span> dans le résidentiel haut de gamme.
+              <span className="text-brun-bois font-semibold">Depuis 2022</span> dans le résidentiel haut de gamme.
               Spécialisé en villas de standing, terrasses bois et meubles d'exception.
             </motion.p>
 

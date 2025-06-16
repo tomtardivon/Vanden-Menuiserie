@@ -24,7 +24,7 @@ const values = [
   {
     icon: <Wrench className="w-8 h-8" />,
     title: "Savoir-faire",
-    description: "2 ans d'expérience et de perfectionnement dans l'art de la menuiserie."
+    description: "Depuis 2022, expertise et perfectionnement dans l'art de la menuiserie."
   }
 ];
 
@@ -132,7 +132,7 @@ export function AboutPageContent() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
           >
             {[
-              { number: "2", label: "Ans d'expérience", suffix: "" },
+              { number: "3", label: "Ans d'expérience", suffix: "" },
               { number: "50", label: "Projets réalisés", suffix: "+" },
               { number: "100", label: "Clients satisfaits", suffix: "%" },
               { number: "10", label: "Ans de garantie", suffix: "" }
@@ -420,7 +420,7 @@ export function AboutPageContent() {
                 <div className="text-bleu-marine/70 text-sm">Avis positifs</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-bleu-marine mb-2">2</div>
+                <div className="text-3xl font-bold text-bleu-marine mb-2">3</div>
                 <div className="text-bleu-marine/70 text-sm">Années d'expérience</div>
               </div>
             </div>
