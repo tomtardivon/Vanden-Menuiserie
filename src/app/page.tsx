@@ -16,25 +16,49 @@ import { MaterialsSection } from "@/components/sections/MaterialsSection";
 import { SustainabilitySection } from "@/components/sections/SustainabilitySection";
 import { MaskEffectSection } from "@/components/sections/MaskEffectSection";
 
+// Nouvelles sections avec vraies images
+import { RealProjectsSection } from "@/components/sections/RealProjectsSection";
+import { TrustSection } from "@/components/sections/TrustSection";
+import { ExcellenceSection } from "@/components/sections/ExcellenceSection";
+import { TransformationsSection } from "@/components/sections/TransformationsSection";
+import { VillesSection } from "@/components/sections/VillesSection";
+
 export default function Home() {
   return (
     <main className="relative">
       {/* Hero - Introduction */}
       <HeroSection />
+
+      {/* NOUVELLES SECTIONS AVEC VRAIES IMAGES */}
+      {/* Ils nous font confiance - avec vraies stats */}
+      <TrustSection />
+
+      {/* Nos Réalisations - avec vraies images projet */}
+      <RealProjectsSection />
+
+      {/* Excellence & Tradition - avec vraies images détails */}
+      <ExcellenceSection />
+
+      {/* Transformations - avec vraies images avant/après */}
+      <TransformationsSection />
+
+      {/* Nos villes d'intervention - Var */}
+      <VillesSection />
+
+      {/* SECTIONS ORIGINALES */}
       {/* Engagement écologique (gris) */}
-      <SustainabilitySection />
+      {/*  <SustainabilitySection /> */}
 
       <MaskEffectSection />
 
-
       {/* Services offerts (blanc) */}
-      <ServicesSection />
+      {/*       <ServicesSection /> */}
 
       {/* Excellence artisanale */}
-      <CraftsmanshipSection />
+      {/*       <CraftsmanshipSection /> */}
 
       {/* Section projets épurée */}
-      <ProjectsSection />
+      {/*       <ProjectsSection /> */}
 
       {/* Section "Pourquoi nous choisir" */}
       <WhyChooseUsSection />
@@ -43,8 +67,7 @@ export default function Home() {
       <ProcessSection />
 
       {/* Section "Nos matériaux" */}
-      <MaterialsSection />
-
+      {/*  <MaterialsSection /> */}
 
       {/* Vision et valeurs (gris) */}
       {/*     <TextRevealSection /> */}
@@ -53,8 +76,8 @@ export default function Home() {
       <VelocityScrollSection />
 
       {/* Projets récents (gris) */}
-      <ProjectsGallery />
-
+      {/*       <ProjectsGallery />
+ */}
       {/* Avant/Après transformations (blanc) */}
       <BeforeAfterSection />
 

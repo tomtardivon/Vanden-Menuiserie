@@ -7,32 +7,32 @@ export const BeforeAfterSection = () => {
   const transformations = [
     {
       id: 1,
-      title: "Transformation Cuisine Complète",
-      description: "Rénovation d'une cuisine des années 80 en espace moderne et fonctionnel",
-      before: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&h=400&auto=format&q=80",
-      after: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&auto=format&q=80",
-      location: "Maison familiale, Toulon",
-      duration: "3 semaines",
+      title: "Cuisine Design Sur Mesure",
+      description: "Transformation complète d'une cuisine en espace design moderne avec finitions haut de gamme",
+      before: "/projet/cuisine4/cuisine-design-details.jpg",
+      after: "/projet/cuisine4/cuisine-design-vue.jpg",
+      location: "Villa contemporaine, Var",
+      duration: "4 semaines",
       highlights: [
-        "Optimisation de l'espace",
-        "Matériaux nobles",
-        "Éclairage LED intégré",
-        "Électroménager encastré"
+        "Design épuré et fonctionnel",
+        "Finitions artisanales premium",
+        "Intégration parfaite des équipements",
+        "Matériaux nobles et durables"
       ]
     },
     {
       id: 2,
-      title: "Rénovation Escalier Ancien",
-      description: "Restauration d'un escalier en bois avec création de rangements sous l'escalier",
-      before: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&h=600&auto=format&q=80",
-      after: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&h=600&auto=format&q=80",
-      location: "Maison de ville, Hyères",
-      duration: "2 semaines",
+      title: "Rénovation Porte de Garage",
+      description: "Transformation d'une ancienne porte de garage en entrée moderne et sécurisée",
+      before: "/projet/porte-garage-renovation/porte-garage-avant.jpg",
+      after: "/projet/porte-garage-renovation/porte-garage-apres.jpg",
+      location: "Maison individuelle, Draguignan",
+      duration: "1 semaine",
       highlights: [
-        "Restauration des marches",
-        "Création de rangements",
-        "Finition cire traditionnelle",
-        "Garde-corps sur mesure"
+        "Sécurisation renforcée",
+        "Isolation thermique améliorée",
+        "Design contemporain",
+        "Motorisation automatique"
       ]
     }
   ];
@@ -47,7 +47,7 @@ export const BeforeAfterSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <motion.span 
+          <motion.span
             className="inline-block text-bleu-marine/70 font-medium mb-4 text-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,14 +56,14 @@ export const BeforeAfterSection = () => {
           >
             Avant / Après
           </motion.span>
-          
+
           <h2 className="text-4xl lg:text-6xl font-heading font-bold text-bleu-marine mb-6">
             La magie de la
             <span className="block text-bleu-marine/70">transformation</span>
           </h2>
-          
+
           <p className="text-xl text-bleu-marine/70 max-w-3xl mx-auto">
-            Découvrez comment nous transformons vos espaces existants en lieux d'exception 
+            Découvrez comment nous transformons vos espaces existants en lieux d'exception
             grâce à notre savoir-faire artisanal et notre vision créative.
           </p>
         </motion.div>
@@ -72,9 +72,8 @@ export const BeforeAfterSection = () => {
           {transformations.map((project, index) => (
             <motion.div
               key={project.id}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-              }`}
+              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                }`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -92,7 +91,7 @@ export const BeforeAfterSection = () => {
                   autoplayDuration={6000}
                 />
               </div>
-              
+
               {/* Content */}
               <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                 <div>
@@ -169,7 +168,7 @@ export const BeforeAfterSection = () => {
               Votre projet de rénovation vous attend
             </h3>
             <p className="text-lg text-bleu-marine/70 mb-8 max-w-2xl mx-auto">
-              Que vous souhaitiez rénover entièrement un espace ou simplement lui donner un nouveau souffle, 
+              Que vous souhaitiez rénover entièrement un espace ou simplement lui donner un nouveau souffle,
               nous vous accompagnons de la conception à la réalisation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
