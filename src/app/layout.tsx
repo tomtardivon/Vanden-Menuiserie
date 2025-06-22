@@ -80,6 +80,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/logo-whitout-background.png" />
         <meta name="theme-color" content="#1E2B39" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex,nofollow" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
